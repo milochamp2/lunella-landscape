@@ -49,19 +49,19 @@ const services = [
   {
     id: 'stonework',
     number: '03',
-    title: 'Stonework & Paving',
-    tagline: 'Paths, walls, and terraces that define space with quiet authority.',
+    title: 'Natural Stone Paving & Brickwork',
+    tagline: 'Beautifully laid natural stone and brickwork that grounds a garden for generations.',
     paragraphs: [
-      'Stone is at the heart of our practice. We work with Victorian bluestone, granite, sandstone, and other regional materials, selecting each piece for character and fitness of purpose.',
-      'Our stonemasons are trained in traditional dry-stone walling, sawn-stone paving, and mortared construction. We refuse to use materials that will not weather honestly or require excessive maintenance.',
+      'We specialise in natural stone paving — the kind that develops character over time and never looks out of place in the landscape. Every surface we lay is selected for its texture, tone, and durability underfoot.',
+      'Our brickwork complements our paving work, offering clean, considered edging, retaining walls, and feature details that give a garden its structure. We do not use materials that fake age or require constant upkeep to look presentable.',
     ],
     includes: [
-      'Dry-stone walls',
-      'Sawn-stone paving',
-      'Steps & terracing',
-      'Gravel paths & courtyards',
-      'Fire surround & feature walls',
-      'Restoration of existing stonework',
+      'Natural stone paving & pathways',
+      'Brick paving & feature brickwork',
+      'Steps, terracing & retaining walls',
+      'Courtyard & entertaining area paving',
+      'Garden edging & border detail',
+      'Restoration of existing paved areas',
     ],
   },
   {
@@ -83,8 +83,26 @@ const services = [
     ],
   },
   {
-    id: 'maintenance',
+    id: 'decking',
     number: '05',
+    title: 'Decking & Pergolas',
+    tagline: 'Our best work is underfoot — natural timber decks built to last a lifetime.',
+    paragraphs: [
+      'We take real pride in our decks. Natural timber is the material we love most for outdoor living — warm, honest, and only more beautiful as it weathers. Every deck we build is designed to feel like a natural extension of the home, not an afterthought.',
+      'Our pergolas follow the same philosophy: solid timber construction, clean proportions, and no shortcuts on joinery or fixings. We design and build structures that stand up to the Australian climate without sacrificing how they look.',
+    ],
+    includes: [
+      'Hardwood & spotted gum decking',
+      'Merbau & ironbark decking',
+      'Custom pergola design & build',
+      'Deck framing & substructure',
+      'Balustrades & screening',
+      'Oiling, sealing & long-term care',
+    ],
+  },
+  {
+    id: 'maintenance',
+    number: '06',
     title: 'Maintenance Programs',
     tagline: 'Seasonal care that keeps your garden at its intended best.',
     paragraphs: [
@@ -226,7 +244,7 @@ export default function ServicesPage() {
             {process.map((step, i) => (
               <Reveal key={step.step} delay={i * 0.08}>
                 <div className="bg-bone p-8 md:p-10 h-full">
-                  <p className="eyebrow text-sand mb-6">{step.step}</p>
+                  <p className="eyebrow text-stone mb-6">{step.step}</p>
                   <h3 className="font-display text-2xl text-ink mb-3">{step.title}</h3>
                   <p className="text-stone text-sm leading-relaxed">{step.description}</p>
                 </div>

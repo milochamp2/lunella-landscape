@@ -23,7 +23,7 @@ const services = [
     ),
   },
   {
-    title: 'Stonework & Paving',
+    title: 'Natural Stone Paving & Brickwork',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
         <rect x="8" y="8" width="14" height="14" rx="1" />

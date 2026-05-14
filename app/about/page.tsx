@@ -67,20 +67,18 @@ export default function AboutPage() {
       <section className="section-pad bg-bone border-b border-sand">
         <div className="site-container">
           <Reveal>
-            <p className="eyebrow mb-8">About the Studio</p>
+            <p className="eyebrow mb-8">About the Company</p>
           </Reveal>
           <Reveal delay={0.1}>
             <h1 className="font-display text-5xl md:text-7xl text-ink max-w-3xl leading-[1.05] mb-8">
-              A practice built
+              Beauty under
               <br />
-              on <em>patience</em>
+              moonlight.
             </h1>
           </Reveal>
           <Reveal delay={0.2}>
             <p className="text-stone text-sm leading-relaxed max-w-lg">
-              Founded in 2015 by Eleanor Walsh, Lunella Landscapes grew from a conviction that
-              landscapes deserve the same rigour and care given to fine architecture. We are a
-              small, deliberate studio — and we intend to stay that way.
+              A Melbourne landscape company named for the beauty that lives in moonlight — and the belief that the finest outdoor spaces are the ones that reveal themselves at every hour of the day.
             </p>
           </Reveal>
         </div>
@@ -100,6 +98,37 @@ export default function AboutPage() {
               />
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* ── Name meaning ── */}
+      <section className="section-pad bg-ink">
+        <div className="site-container">
+          <div className="max-w-3xl mx-auto text-center">
+            <Reveal>
+              <p className="eyebrow text-stone mb-8">The Name</p>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-paper mb-6 leading-tight">
+                Beauty under moonlight.
+              </h2>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <p className="text-paper/50 text-sm tracking-widest uppercase mb-12">
+                Luna &nbsp;·&nbsp; Moon &nbsp;&nbsp;+&nbsp;&nbsp; Ella &nbsp;·&nbsp; Beauty
+              </p>
+            </Reveal>
+            <Reveal delay={0.3}>
+              <p className="text-stone text-base leading-relaxed mb-5 max-w-2xl mx-auto">
+                Lunella is a name born from two simple words — <em className="text-paper/80 not-italic">Luna</em>, the moon, and <em className="text-paper/80 not-italic">Ella</em>, beauty. Together they speak to something we believe deeply: that a truly great garden does not belong to daylight alone.
+              </p>
+            </Reveal>
+            <Reveal delay={0.38}>
+              <p className="text-stone text-base leading-relaxed max-w-2xl mx-auto">
+                The best outdoor spaces shift and soften as the sun goes down — shadows lengthen across stone, silver-leafed plants catch the moonlight, and the garden takes on a quieter, more intimate life. That quality of beauty, the kind that reveals itself slowly and at unexpected hours, is what we are always working towards.
+              </p>
+            </Reveal>
+          </div>
         </div>
       </section>
 

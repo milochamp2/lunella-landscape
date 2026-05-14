@@ -61,7 +61,7 @@ export default function ContactPage() {
                     </a>
                   </div>
                   <div>
-                    <p className="eyebrow mb-1.5">Studio</p>
+                    <p className="eyebrow mb-1.5">Company</p>
                     <address className="not-italic text-sm text-stone leading-relaxed">
                       Level 1, 42 Smith Street
                       <br />

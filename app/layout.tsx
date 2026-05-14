@@ -20,7 +20,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Lunella Landscape — Melbourne Landscape Studio',
+    default: 'Lunella Landscape — Melbourne Landscape Company',
     template: '%s | Lunella Landscape',
   },
   description:

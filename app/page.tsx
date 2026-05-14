@@ -59,7 +59,7 @@ export default function HomePage() {
 
         <div className="relative z-10 site-container pb-20 md:pb-32">
           <Reveal>
-            <p className="eyebrow text-paper/60 mb-8">Melbourne Landscape Studio</p>
+            <p className="eyebrow text-paper/60 mb-8">Melbourne Landscape Company</p>
           </Reveal>
           <Reveal delay={0.12}>
             <h1 className="font-display text-6xl md:text-8xl lg:text-[7rem] xl:text-[9rem] font-bold text-paper leading-[1.02] mb-8 max-w-5xl">
@@ -158,13 +158,15 @@ export default function HomePage() {
         <div className="site-container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <Reveal>
-              <div className="aspect-[3/4] bg-ink flex items-center justify-center">
-                <Logo size={72} dark />
+              <div className="flex items-center justify-center py-8">
+                <div className="w-72 h-72 md:w-96 md:h-96 rounded-full bg-ink flex items-center justify-center">
+                  <Logo size={80} dark />
+                </div>
               </div>
             </Reveal>
             <div>
               <Reveal delay={0.1}>
-                <p className="eyebrow mb-6">About the Studio</p>
+                <p className="eyebrow mb-6">About the Company</p>
               </Reveal>
               <Reveal delay={0.2}>
                 <h2 className="font-display text-4xl md:text-5xl font-bold text-ink mb-6">

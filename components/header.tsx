@@ -20,6 +20,10 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
+  // Home page has a dark hero — keep header transparent + white text until scrolled
+  const isHome = pathname === '/'
+  const isDark = isHome && !scrolled
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
     window.addEventListener('scroll', onScroll, { passive: true })
@@ -40,12 +44,14 @@ export function Header() {
       <header
         className={cn(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
-          scrolled ? 'bg-paper/95 backdrop-blur-sm border-b border-sand' : 'bg-transparent',
+          scrolled || !isHome
+            ? 'bg-paper/95 backdrop-blur-sm border-b border-sand'
+            : 'bg-transparent',
         )}
       >
         <div className="site-container flex items-center justify-between h-20 md:h-28">
           <Link href="/" aria-label="Lunella Landscapes — Home">
-            <Logo size={44} />
+            <Logo size={44} dark={isDark} />
           </Link>
 
           <nav className="hidden md:flex items-center gap-12" aria-label="Primary">
@@ -54,8 +60,10 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  'text-xs font-sans font-medium tracking-widest uppercase transition-colors duration-200 hover:text-ink',
-                  pathname === link.href ? 'text-ink' : 'text-stone',
+                  'text-xs font-sans font-medium tracking-widest uppercase transition-colors duration-200',
+                  isDark
+                    ? cn('text-paper/70 hover:text-paper', pathname === link.href && 'text-paper')
+                    : cn('hover:text-ink', pathname === link.href ? 'text-ink' : 'text-stone'),
                 )}
               >
                 {link.label}
@@ -71,19 +79,22 @@ export function Header() {
           >
             <span
               className={cn(
-                'block h-px w-6 bg-ink transition-all duration-300 origin-center',
+                'block h-px w-6 transition-all duration-300 origin-center',
+                isDark ? 'bg-paper' : 'bg-ink',
                 isOpen && 'translate-y-[7px] rotate-45',
               )}
             />
             <span
               className={cn(
-                'block h-px w-6 bg-ink transition-all duration-300',
+                'block h-px w-6 transition-all duration-300',
+                isDark ? 'bg-paper' : 'bg-ink',
                 isOpen && 'opacity-0',
               )}
             />
             <span
               className={cn(
-                'block h-px w-6 bg-ink transition-all duration-300 origin-center',
+                'block h-px w-6 transition-all duration-300 origin-center',
+                isDark ? 'bg-paper' : 'bg-ink',
                 isOpen && '-translate-y-[7px] -rotate-45',
               )}
             />
@@ -117,10 +128,7 @@ export function Header() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.08 + i * 0.07 }}
               >
-                <Link
-                  href={link.href}
-                  className="font-display text-5xl text-ink"
-                >
+                <Link href={link.href} className="font-display text-5xl font-bold text-ink">
                   {link.label}
                 </Link>
               </motion.div>

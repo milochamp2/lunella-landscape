@@ -70,7 +70,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="eyebrow text-stone mb-6">Studio</p>
+            <p className="eyebrow text-stone mb-6">Company</p>
             <ul className="space-y-3">
               {studio.map((l) => (
                 <li key={l.href}>

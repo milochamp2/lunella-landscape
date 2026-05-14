@@ -9,7 +9,7 @@
   }
 
   body {
-    @apply bg-paper text-ink font-sans text-base leading-relaxed;
+    @apply bg-paper text-slate font-sans text-base leading-relaxed;
   }
 
   h1,
@@ -38,7 +38,7 @@
   }
 
   .eyebrow {
-    @apply text-2xs font-sans font-medium tracking-widest uppercase text-stone;
+    @apply text-2xs font-sans font-medium tracking-widest uppercase text-slate;
   }
 
   .image-frame {
