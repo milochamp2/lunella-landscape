@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Reveal } from '@/components/reveal'
 import { CtaBanner } from '@/components/cta-banner'
 import { ServicesGrid } from '@/components/services-grid'
+import { Logo } from '@/components/logo'
 
 const projects = [
   {
@@ -157,14 +158,8 @@ export default function HomePage() {
         <div className="site-container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <Reveal>
-              <div className="image-frame aspect-[3/4]">
-                <Image
-                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=600&q=80"
-                  alt="Eleanor Walsh — Founding Director"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 45vw"
-                />
+              <div className="aspect-[3/4] bg-ink flex items-center justify-center">
+                <Logo size={72} dark />
               </div>
             </Reveal>
             <div>
