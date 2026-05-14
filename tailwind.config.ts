@@ -17,7 +17,7 @@ const config: Config = {
         sand: '#c8c4bc',
       },
       fontFamily: {
-        display: ['var(--font-playfair)', 'Georgia', 'serif'],
+        display: ['var(--font-montserrat)', 'system-ui', 'sans-serif'],
         sans: ['var(--font-poppins)', 'system-ui', 'sans-serif'],
       },
       fontSize: {

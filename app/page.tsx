@@ -1,28 +1,8 @@
-﻿import Image from 'next/image'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Reveal } from '@/components/reveal'
 import { CtaBanner } from '@/components/cta-banner'
-
-const services = [
-  {
-    number: '01',
-    title: 'Landscape Design',
-    description:
-      'From initial concept to detailed planting plans — spatial thinking that resolves the relationship between structure, plant, and light.',
-  },
-  {
-    number: '02',
-    title: 'Garden Installation',
-    description:
-      'Expert construction and planting by our in-house team, with material sourcing and project management handled end to end.',
-  },
-  {
-    number: '03',
-    title: 'Stonework & Paving',
-    description:
-      'Bluestone, granite, and sandstone paths, walls, and terraces that weather beautifully and define space with quiet authority.',
-  },
-]
+import { ServicesGrid } from '@/components/services-grid'
 
 const projects = [
   {
@@ -63,20 +43,32 @@ export default function HomePage() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="min-h-[calc(100vh-5rem)] md:min-h-[calc(100vh-7rem)] flex flex-col justify-end bg-bone pb-20 md:pb-28">
-        <div className="site-container">
+      <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
+        {/* Background image */}
+        <Image
+          src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1600&q=80"
+          alt="Lush formal garden"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/40 to-transparent" />
+
+        <div className="relative z-10 site-container pb-20 md:pb-32">
           <Reveal>
-            <p className="eyebrow mb-8">Melbourne Landscape Studio</p>
+            <p className="eyebrow text-paper/60 mb-8">Melbourne Landscape Studio</p>
           </Reveal>
           <Reveal delay={0.12}>
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-ink leading-[1.05] mb-8 max-w-4xl">
+            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-paper leading-[1.05] mb-8 max-w-4xl">
               We shape land
               <br />
               into living art.
             </h1>
           </Reveal>
           <Reveal delay={0.24}>
-            <p className="text-stone max-w-md text-sm leading-relaxed mb-12">
+            <p className="text-paper/70 max-w-md text-sm leading-relaxed mb-12">
               Lunella Landscapes is a landscape studio creating considered outdoor environments —
               from intimate city gardens to expansive rural estates across Victoria.
             </p>
@@ -86,68 +78,24 @@ export default function HomePage() {
               <Link href="/contact" className="btn-primary">
                 Begin Your Project
               </Link>
-              <Link href="/services" className="btn-secondary">
+              <Link
+                href="/services"
+                className="btn-secondary border-paper/40 text-paper hover:bg-paper hover:text-ink"
+              >
                 Our Services
               </Link>
             </div>
           </Reveal>
         </div>
 
-        <Reveal delay={0.5} className="site-container mt-16">
-          <div className="image-frame aspect-[2/1] w-full">
-            <Image
-              src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1400&q=80"
-              alt="Lush formal garden — Fernside Toorak"
-              fill
-              priority
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 90vw"
-            />
-          </div>
-        </Reveal>
-      </section>
-
-      {/* ── Services preview ── */}
-      <section className="section-pad bg-paper border-t border-sand">
-        <div className="site-container">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
-            <Reveal>
-              <p className="eyebrow mb-4">What We Do</p>
-              <h2 className="font-display text-4xl md:text-5xl text-ink">
-                Craft at every
-                <br />
-                <em>scale</em>
-              </h2>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <Link
-                href="/services"
-                className="eyebrow text-stone hover:text-ink transition-colors duration-200 inline-flex items-center gap-2"
-              >
-                View All Services <span aria-hidden>→</span>
-              </Link>
-            </Reveal>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-sand">
-            {services.map((s, i) => (
-              <Reveal key={s.title} delay={i * 0.1}>
-                <div className="group bg-paper hover:bg-ink transition-colors duration-500 p-8 md:p-10 h-full">
-                  <p className="eyebrow text-sand group-hover:text-stone transition-colors duration-500 mb-8">
-                    {s.number}
-                  </p>
-                  <h3 className="font-display text-2xl md:text-3xl text-ink group-hover:text-paper transition-colors duration-500 mb-4">
-                    {s.title}
-                  </h3>
-                  <p className="text-stone group-hover:text-paper/60 transition-colors duration-500 text-sm leading-relaxed">
-                    {s.description}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 opacity-50">
+          <div className="w-px h-12 bg-paper animate-pulse" />
         </div>
       </section>
+
+      {/* ── Services ── */}
+      <ServicesGrid />
 
       {/* ── Selected projects ── */}
       <section className="section-pad bg-bone border-t border-sand">
@@ -157,10 +105,10 @@ export default function HomePage() {
               <p className="eyebrow mb-4">Selected Work</p>
             </Reveal>
             <Reveal delay={0.1}>
-              <h2 className="font-display text-4xl md:text-5xl text-ink">
+              <h2 className="font-display text-4xl md:text-5xl font-bold text-ink">
                 Recent
                 <br />
-                <em>projects</em>
+                projects
               </h2>
             </Reveal>
           </div>
@@ -182,7 +130,7 @@ export default function HomePage() {
                     <p className="eyebrow mb-2">
                       {p.category} &middot; {p.location}
                     </p>
-                    <h3 className="font-display text-2xl md:text-3xl text-ink mb-1">{p.title}</h3>
+                    <h3 className="font-display text-2xl md:text-3xl font-bold text-ink mb-1">{p.title}</h3>
                     <p className="text-stone text-sm">{p.year}</p>
                   </div>
                   <span
@@ -195,6 +143,12 @@ export default function HomePage() {
               </Reveal>
             ))}
           </div>
+
+          <Reveal delay={0.2} className="mt-12 text-center">
+            <Link href="/projects" className="btn-secondary">
+              View All Projects
+            </Link>
+          </Reveal>
         </div>
       </section>
 
@@ -218,10 +172,10 @@ export default function HomePage() {
                 <p className="eyebrow mb-6">About the Studio</p>
               </Reveal>
               <Reveal delay={0.2}>
-                <h2 className="font-display text-4xl md:text-5xl text-ink mb-6">
+                <h2 className="font-display text-4xl md:text-5xl font-bold text-ink mb-6">
                   Land as a medium,
                   <br />
-                  <em>time as a collaborator</em>
+                  time as a collaborator
                 </h2>
               </Reveal>
               <Reveal delay={0.3}>

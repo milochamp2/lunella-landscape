@@ -10,6 +10,8 @@ import { Logo } from './logo'
 const navLinks = [
   { href: '/about', label: 'About' },
   { href: '/services', label: 'Services' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/crew', label: 'The Crew' },
   { href: '/contact', label: 'Contact' },
 ]
 
@@ -43,7 +45,7 @@ export function Header() {
       >
         <div className="site-container flex items-center justify-between h-20 md:h-28">
           <Link href="/" aria-label="Lunella Landscapes — Home">
-            <Logo size={64} variant="light-bg" />
+            <Logo size={36} />
           </Link>
 
           <nav className="hidden md:flex items-center gap-12" aria-label="Primary">
@@ -105,7 +107,7 @@ export function Header() {
               transition={{ delay: 0.04 }}
               className="mb-4"
             >
-              <Logo size={64} variant="light-bg" />
+              <Logo size={36} />
             </motion.div>
 
             {navLinks.map((link, i) => (

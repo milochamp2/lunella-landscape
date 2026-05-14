@@ -3,7 +3,8 @@
     "allow": [
       "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\app\\\\about\")",
       "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\app\\\\services\")",
-      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\app\\\\contact\")"
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\app\\\\contact\")",
+      "Bash(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\app\\\\crew\")"
     ]
   }
 }

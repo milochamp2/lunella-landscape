@@ -1,57 +1,48 @@
 interface LogoProps {
   size?: number
   className?: string
-  /** Swap fill/stroke for use on dark backgrounds where the circle disappears */
-  variant?: 'dark-bg' | 'light-bg'
+  dark?: boolean
 }
 
-export function Logo({ size = 48, className = '', variant = 'light-bg' }: LogoProps) {
-  // On dark bg (#0a0a0a) the fill blends away — the white ring + white text floats.
-  // On light bg the black circle badge reads as a stamp/seal.
-  const fill = variant === 'dark-bg' ? 'transparent' : '#0a0a0a'
-  const stroke = '#ffffff'
-  const textFill = '#ffffff'
+export function Logo({ size = 48, className = '', dark = false }: LogoProps) {
+  const color = dark ? '#ffffff' : '#0a0a0a'
 
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={size}
+      width={size * (220 / 75)}
       height={size}
-      viewBox="0 0 200 200"
+      viewBox="0 0 220 75"
       role="img"
       aria-label="Lunella Landscapes"
       className={className}
     >
-      <circle cx="100" cy="100" r="95" fill={fill} stroke={stroke} strokeWidth="3" />
-
-      {/* "Lunella" — large display serif */}
       <text
-        x="100"
-        y="108"
+        x="110"
+        y="42"
         textAnchor="middle"
         dominantBaseline="middle"
-        fontFamily="var(--font-playfair), Georgia, serif"
-        fontSize="60"
-        fontWeight="600"
-        fill={textFill}
+        fontFamily="var(--font-montserrat), var(--font-poppins), system-ui, sans-serif"
+        fontSize="42"
+        fontWeight="700"
+        letterSpacing="2"
+        fill={color}
       >
         Lunella
       </text>
 
-      {/* Decorative rule above LANDSCAPES */}
-      <line x1="42" y1="128" x2="158" y2="128" stroke={textFill} strokeWidth="0.75" opacity="0.5" />
+      <line x1="18" y1="58" x2="202" y2="58" stroke={color} strokeWidth="0.75" opacity="0.4" />
 
-      {/* "LANDSCAPES" — spaced caps */}
       <text
-        x="100"
-        y="143"
+        x="110"
+        y="68"
         textAnchor="middle"
         dominantBaseline="middle"
         fontFamily="var(--font-poppins), system-ui, sans-serif"
-        fontSize="11"
+        fontSize="9"
         fontWeight="500"
-        fill={textFill}
-        letterSpacing="5"
+        fill={color}
+        letterSpacing="6"
       >
         LANDSCAPES
       </text>

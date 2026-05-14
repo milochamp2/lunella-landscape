@@ -4,6 +4,8 @@ import { Logo } from './logo'
 const studio = [
   { href: '/about', label: 'About' },
   { href: '/services', label: 'Services' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/crew', label: 'The Crew' },
   { href: '/contact', label: 'Contact' },
 ]
 
@@ -15,17 +17,56 @@ const services = [
   { href: '/services#maintenance', label: 'Maintenance' },
 ]
 
+function InstagramIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}
+
+function FacebookIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </svg>
+  )
+}
+
 export function Footer() {
   return (
     <footer className="bg-ink text-paper">
       <div className="site-container py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-14">
           <div className="md:col-span-2">
-            <Logo size={64} variant="dark-bg" className="mb-5" />
-            <p className="text-stone text-sm leading-relaxed max-w-xs">
+            <Logo size={36} dark className="mb-5" />
+            <p className="text-stone text-sm leading-relaxed max-w-xs mt-4">
               A Melbourne-based landscape studio creating considered outdoor environments for
               discerning clients across Victoria.
             </p>
+
+            <div className="flex items-center gap-4 mt-6">
+              <a
+                href="https://instagram.com/lunellalandscapes"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Lunella Landscapes on Instagram"
+                className="text-stone hover:text-paper transition-colors duration-200"
+              >
+                <InstagramIcon />
+              </a>
+              <a
+                href="https://facebook.com/lunellalandscapes"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Lunella Landscapes on Facebook"
+                className="text-stone hover:text-paper transition-colors duration-200"
+              >
+                <FacebookIcon />
+              </a>
+            </div>
           </div>
 
           <div>
