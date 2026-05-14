@@ -30,7 +30,7 @@ export function Logo({ size = 48, className = '', variant = 'light-bg' }: LogoPr
         y="108"
         textAnchor="middle"
         dominantBaseline="middle"
-        fontFamily="var(--font-cormorant), Georgia, serif"
+        fontFamily="var(--font-playfair), Georgia, serif"
         fontSize="60"
         fontWeight="600"
         fill={textFill}
@@ -47,7 +47,7 @@ export function Logo({ size = 48, className = '', variant = 'light-bg' }: LogoPr
         y="143"
         textAnchor="middle"
         dominantBaseline="middle"
-        fontFamily="var(--font-inter), system-ui, sans-serif"
+        fontFamily="var(--font-poppins), system-ui, sans-serif"
         fontSize="11"
         fontWeight="500"
         fill={textFill}

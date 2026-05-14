@@ -1,5 +1,5 @@
+﻿import Image from 'next/image'
 import Link from 'next/link'
-import { Placeholder } from '@/components/placeholder'
 import { Reveal } from '@/components/reveal'
 import { CtaBanner } from '@/components/cta-banner'
 
@@ -30,28 +30,32 @@ const projects = [
     category: 'Private Garden',
     location: 'Toorak, VIC',
     year: '2024',
-    ratio: '4/3' as const,
+    src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80',
+    aspect: 'aspect-[4/3]',
   },
   {
     title: 'Merri Creek Commons',
     category: 'Community Space',
     location: 'Northcote, VIC',
     year: '2024',
-    ratio: '16/9' as const,
+    src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1000&q=80',
+    aspect: 'aspect-[16/9]',
   },
   {
     title: 'Heathcote Vineyard',
     category: 'Rural Estate',
     location: 'Heathcote, VIC',
     year: '2023',
-    ratio: '4/3' as const,
+    src: 'https://images.unsplash.com/photo-1470058869966-2a3a9d1399b1?auto=format&fit=crop&w=800&q=80',
+    aspect: 'aspect-[4/3]',
   },
   {
     title: 'Collins Quarter Rooftop',
     category: 'Commercial',
     location: 'Melbourne CBD',
     year: '2023',
-    ratio: '16/9' as const,
+    src: 'https://images.unsplash.com/photo-1444628838545-ac4016a5418a?auto=format&fit=crop&w=1000&q=80',
+    aspect: 'aspect-[16/9]',
   },
 ]
 
@@ -73,7 +77,7 @@ export default function HomePage() {
           </Reveal>
           <Reveal delay={0.24}>
             <p className="text-stone max-w-md text-sm leading-relaxed mb-12">
-              Lunella Landscape is a landscape studio creating considered outdoor environments —
+              Lunella Landscapes is a landscape studio creating considered outdoor environments —
               from intimate city gardens to expansive rural estates across Victoria.
             </p>
           </Reveal>
@@ -90,7 +94,16 @@ export default function HomePage() {
         </div>
 
         <Reveal delay={0.5} className="site-container mt-16">
-          <Placeholder ratio="2/1" label="Fernside Garden — Toorak" className="w-full" />
+          <div className="image-frame aspect-[2/1] w-full">
+            <Image
+              src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1400&q=80"
+              alt="Lush formal garden — Fernside Toorak"
+              fill
+              priority
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 90vw"
+            />
+          </div>
         </Reveal>
       </section>
 
@@ -156,8 +169,14 @@ export default function HomePage() {
             {projects.map((p, i) => (
               <Reveal key={p.title} delay={i * 0.07}>
                 <div className="group py-8 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10 hover:translate-x-1 transition-transform duration-300">
-                  <div className="flex-shrink-0 w-full sm:w-44 lg:w-56">
-                    <Placeholder ratio={p.ratio} label={p.category} />
+                  <div className={`flex-shrink-0 w-full sm:w-44 lg:w-56 image-frame ${p.aspect}`}>
+                    <Image
+                      src={p.src}
+                      alt={p.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 100vw, 224px"
+                    />
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="eyebrow mb-2">
@@ -184,7 +203,15 @@ export default function HomePage() {
         <div className="site-container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <Reveal>
-              <Placeholder ratio="3/4" label="Studio — Eleanor Walsh" />
+              <div className="image-frame aspect-[3/4]">
+                <Image
+                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=600&q=80"
+                  alt="Eleanor Walsh — Founding Director"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 45vw"
+                />
+              </div>
             </Reveal>
             <div>
               <Reveal delay={0.1}>
@@ -199,7 +226,7 @@ export default function HomePage() {
               </Reveal>
               <Reveal delay={0.3}>
                 <p className="text-stone text-sm leading-relaxed mb-4">
-                  Founded in 2015, Lunella Landscape has spent a decade developing a practice
+                  Founded in 2015, Lunella Landscapes has spent a decade developing a practice
                   grounded in ecological sensitivity and material restraint. We believe the best
                   gardens are those that improve with age.
                 </p>

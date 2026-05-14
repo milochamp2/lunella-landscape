@@ -1,12 +1,12 @@
 ﻿import type { Metadata } from 'next'
-import { Placeholder } from '@/components/placeholder'
+import Image from 'next/image'
 import { Reveal } from '@/components/reveal'
 import { CtaBanner } from '@/components/cta-banner'
 
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Lunella Landscape is a Melbourne landscape studio founded in 2015, creating ecologically sensitive and materially restrained outdoor environments across Victoria.',
+    'Lunella Landscapes is a Melbourne landscape studio founded in 2015, creating ecologically sensitive and materially restrained outdoor environments across Victoria.',
 }
 
 const values = [
@@ -37,16 +37,19 @@ const team = [
     name: 'Eleanor Walsh',
     role: 'Founding Director & Lead Designer',
     bio: 'Eleanor trained at the University of Melbourne and the Royal Botanic Gardens, London. Her work is informed by a decade studying gardens in Japan, the UK, and South Africa.',
+    src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=600&q=80',
   },
   {
     name: 'James Okafor',
     role: 'Head of Construction',
     bio: 'James brings 18 years of stonemason and landscape construction experience. His eye for detail and material quality sets the physical standard for every project.',
+    src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80',
   },
   {
     name: 'Priya Sharma',
     role: 'Senior Horticulturalist',
     bio: 'Priya specialises in indigenous planting and complex mixed borders. She manages our maintenance program and leads all establishment planting on new projects.',
+    src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80',
   },
 ]
 
@@ -75,7 +78,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.2}>
             <p className="text-stone text-sm leading-relaxed max-w-lg">
-              Founded in 2015 by Eleanor Walsh, Lunella Landscape grew from a conviction that
+              Founded in 2015 by Eleanor Walsh, Lunella Landscapes grew from a conviction that
               landscapes deserve the same rigour and care given to fine architecture. We are a
               small, deliberate studio — and we intend to stay that way.
             </p>
@@ -87,11 +90,15 @@ export default function AboutPage() {
       <section className="bg-paper">
         <div className="site-container py-16">
           <Reveal>
-            <Placeholder
-              ratio="2/1"
-              label="Heathcote Vineyard — Rural Estate"
-              className="w-full"
-            />
+            <div className="image-frame aspect-[2/1] w-full">
+              <Image
+                src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1400&q=80"
+                alt="Stone garden path — Heathcote Vineyard"
+                fill
+                className="object-cover"
+                sizes="90vw"
+              />
+            </div>
           </Reveal>
         </div>
       </section>
@@ -164,7 +171,15 @@ export default function AboutPage() {
             {team.map((member, i) => (
               <Reveal key={member.name} delay={i * 0.1}>
                 <div>
-                  <Placeholder ratio="3/4" label={member.name} className="mb-6" />
+                  <div className="image-frame aspect-[3/4] mb-6">
+                    <Image
+                      src={member.src}
+                      alt={member.name}
+                      fill
+                      className="object-cover object-top"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
                   <p className="eyebrow mb-2">{member.role}</p>
                   <h3 className="font-display text-2xl text-ink mb-3">{member.name}</h3>
                   <p className="text-stone text-sm leading-relaxed">{member.bio}</p>
