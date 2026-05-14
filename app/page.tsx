@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Reveal } from '@/components/reveal'
 import { CtaBanner } from '@/components/cta-banner'
-import { ServicesGrid } from '@/components/services-grid'
+import { ServicesScroll } from '@/components/services-scroll'
 import { Logo } from '@/components/logo'
 
 const projects = [
@@ -44,7 +44,7 @@ export default function HomePage() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
+      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
         {/* Background image */}
         <Image
           src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1600&q=80"
@@ -57,12 +57,12 @@ export default function HomePage() {
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/40 to-transparent" />
 
-        <div className="relative z-10 site-container pb-20 md:pb-32">
+        <div className="relative z-10 site-container py-32 md:py-40">
           <Reveal>
             <p className="eyebrow text-paper/60 mb-8">Melbourne Landscape Company</p>
           </Reveal>
           <Reveal delay={0.12}>
-            <h1 className="font-display text-6xl md:text-8xl lg:text-[7rem] xl:text-[9rem] font-bold text-paper leading-[1.02] mb-8 max-w-5xl">
+            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-paper leading-[1.02] mb-8 max-w-4xl">
               We shape land
               <br />
               into living art.
@@ -96,7 +96,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Services ── */}
-      <ServicesGrid />
+      <ServicesScroll />
 
       {/* ── Selected projects ── */}
       <section className="section-pad bg-bone border-t border-sand">

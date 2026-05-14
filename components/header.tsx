@@ -51,7 +51,7 @@ export function Header() {
       >
         <div className="site-container flex items-center justify-between h-20 md:h-28">
           <Link href="/" aria-label="Lunella Landscapes — Home">
-            <Logo size={44} dark={isDark} />
+            <Logo size={56} dark={isDark} />
           </Link>
 
           <nav className="hidden md:flex items-center gap-12" aria-label="Primary">
@@ -118,7 +118,7 @@ export function Header() {
               transition={{ delay: 0.04 }}
               className="mb-4"
             >
-              <Logo size={44} />
+              <Logo size={56} />
             </motion.div>
 
             {navLinks.map((link, i) => (

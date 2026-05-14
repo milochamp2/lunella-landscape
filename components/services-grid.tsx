@@ -156,7 +156,7 @@ export function ServicesGrid() {
       {/* Large faded watermark */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none" aria-hidden>
         <span
-          className="font-display font-black text-paper/[0.04] whitespace-nowrap"
+          className="font-display font-black text-paper/[0.08] whitespace-nowrap"
           style={{ fontSize: 'clamp(80px, 18vw, 240px)', letterSpacing: '-0.02em' }}
         >
           Lunella
@@ -183,10 +183,10 @@ export function ServicesGrid() {
           </Reveal>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-px bg-slate/30">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-px bg-white/10">
           {services.map((s, i) => (
             <Reveal key={s.title} delay={i * 0.05}>
-              <div className="group bg-ink hover:bg-slate/20 transition-colors duration-300 p-6 md:p-8 flex flex-col items-center text-center gap-4">
+              <div className="group bg-transparent hover:bg-white/5 transition-colors duration-300 p-6 md:p-8 flex flex-col items-center text-center gap-4">
                 <div className="text-stone group-hover:text-paper transition-colors duration-300">
                   {s.icon}
                 </div>
