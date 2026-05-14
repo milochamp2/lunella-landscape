@@ -41,18 +41,18 @@ export function Header() {
           scrolled ? 'bg-paper/95 backdrop-blur-sm border-b border-sand' : 'bg-transparent',
         )}
       >
-        <div className="site-container flex items-center justify-between h-16 md:h-20">
+        <div className="site-container flex items-center justify-between h-20 md:h-28">
           <Link href="/" aria-label="Lunella Landscapes — Home">
-            <Logo size={44} variant="light-bg" />
+            <Logo size={64} variant="light-bg" />
           </Link>
 
-          <nav className="hidden md:flex items-center gap-10" aria-label="Primary">
+          <nav className="hidden md:flex items-center gap-12" aria-label="Primary">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  'eyebrow transition-colors duration-200 hover:text-ink',
+                  'text-xs font-sans font-medium tracking-widest uppercase transition-colors duration-200 hover:text-ink',
                   pathname === link.href ? 'text-ink' : 'text-stone',
                 )}
               >

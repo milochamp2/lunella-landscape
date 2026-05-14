@@ -63,7 +63,7 @@ export default function HomePage() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-5rem)] flex flex-col justify-end bg-bone pb-20 md:pb-28">
+      <section className="min-h-[calc(100vh-5rem)] md:min-h-[calc(100vh-7rem)] flex flex-col justify-end bg-bone pb-20 md:pb-28">
         <div className="site-container">
           <Reveal>
             <p className="eyebrow mb-8">Melbourne Landscape Studio</p>
