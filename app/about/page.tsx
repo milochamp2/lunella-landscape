@@ -170,16 +170,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {team.map((member, i) => (
               <Reveal key={member.name} delay={i * 0.1}>
-                <div>
-                  <div className="image-frame aspect-[3/4] mb-6">
-                    <Image
-                      src={member.src}
-                      alt={member.name}
-                      fill
-                      className="object-cover object-top"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                  </div>
+                <div className="border-t border-sand pt-8">
                   <p className="eyebrow mb-2">{member.role}</p>
                   <h3 className="font-display text-2xl text-ink mb-3">{member.name}</h3>
                   <p className="text-stone text-sm leading-relaxed">{member.bio}</p>

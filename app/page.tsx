@@ -61,14 +61,14 @@ export default function HomePage() {
             <p className="eyebrow text-paper/60 mb-8">Melbourne Landscape Studio</p>
           </Reveal>
           <Reveal delay={0.12}>
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-paper leading-[1.05] mb-8 max-w-4xl">
+            <h1 className="font-display text-6xl md:text-8xl lg:text-[7rem] xl:text-[9rem] font-bold text-paper leading-[1.02] mb-8 max-w-5xl">
               We shape land
               <br />
               into living art.
             </h1>
           </Reveal>
           <Reveal delay={0.24}>
-            <p className="text-paper/70 max-w-md text-sm leading-relaxed mb-12">
+            <p className="text-paper/70 max-w-lg text-base leading-relaxed mb-12">
               Lunella Landscapes is a landscape studio creating considered outdoor environments —
               from intimate city gardens to expansive rural estates across Victoria.
             </p>
