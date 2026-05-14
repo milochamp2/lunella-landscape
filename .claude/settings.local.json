@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\app\\\\about\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\app\\\\services\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\app\\\\contact\")"
+    ]
+  }
+}

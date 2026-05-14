@@ -1,0 +1,226 @@
+import Link from 'next/link'
+import { Placeholder } from '@/components/placeholder'
+import { Reveal } from '@/components/reveal'
+import { CtaBanner } from '@/components/cta-banner'
+
+const services = [
+  {
+    number: '01',
+    title: 'Landscape Design',
+    description:
+      'From initial concept to detailed planting plans — spatial thinking that resolves the relationship between structure, plant, and light.',
+  },
+  {
+    number: '02',
+    title: 'Garden Installation',
+    description:
+      'Expert construction and planting by our in-house team, with material sourcing and project management handled end to end.',
+  },
+  {
+    number: '03',
+    title: 'Stonework & Paving',
+    description:
+      'Bluestone, granite, and sandstone paths, walls, and terraces that weather beautifully and define space with quiet authority.',
+  },
+]
+
+const projects = [
+  {
+    title: 'The Fernside Residence',
+    category: 'Private Garden',
+    location: 'Toorak, VIC',
+    year: '2024',
+    ratio: '4/3' as const,
+  },
+  {
+    title: 'Merri Creek Commons',
+    category: 'Community Space',
+    location: 'Northcote, VIC',
+    year: '2024',
+    ratio: '16/9' as const,
+  },
+  {
+    title: 'Heathcote Vineyard',
+    category: 'Rural Estate',
+    location: 'Heathcote, VIC',
+    year: '2023',
+    ratio: '4/3' as const,
+  },
+  {
+    title: 'Collins Quarter Rooftop',
+    category: 'Commercial',
+    location: 'Melbourne CBD',
+    year: '2023',
+    ratio: '16/9' as const,
+  },
+]
+
+export default function HomePage() {
+  return (
+    <>
+      {/* ── Hero ── */}
+      <section className="min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-5rem)] flex flex-col justify-end bg-bone pb-20 md:pb-28">
+        <div className="site-container">
+          <Reveal>
+            <p className="eyebrow mb-8">Melbourne Landscape Studio</p>
+          </Reveal>
+          <Reveal delay={0.12}>
+            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-ink leading-[1.05] mb-8 max-w-4xl">
+              We shape land
+              <br />
+              into living art.
+            </h1>
+          </Reveal>
+          <Reveal delay={0.24}>
+            <p className="text-stone max-w-md text-sm leading-relaxed mb-12">
+              Lunella Landscape is a landscape studio creating considered outdoor environments —
+              from intimate city gardens to expansive rural estates across Victoria.
+            </p>
+          </Reveal>
+          <Reveal delay={0.36}>
+            <div className="flex flex-wrap gap-4">
+              <Link href="/contact" className="btn-primary">
+                Begin Your Project
+              </Link>
+              <Link href="/services" className="btn-secondary">
+                Our Services
+              </Link>
+            </div>
+          </Reveal>
+        </div>
+
+        <Reveal delay={0.5} className="site-container mt-16">
+          <Placeholder ratio="2/1" label="Fernside Garden — Toorak" className="w-full" />
+        </Reveal>
+      </section>
+
+      {/* ── Services preview ── */}
+      <section className="section-pad bg-paper border-t border-sand">
+        <div className="site-container">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+            <Reveal>
+              <p className="eyebrow mb-4">What We Do</p>
+              <h2 className="font-display text-4xl md:text-5xl text-ink">
+                Craft at every
+                <br />
+                <em>scale</em>
+              </h2>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <Link
+                href="/services"
+                className="eyebrow text-stone hover:text-ink transition-colors duration-200 inline-flex items-center gap-2"
+              >
+                View All Services <span aria-hidden>→</span>
+              </Link>
+            </Reveal>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-sand">
+            {services.map((s, i) => (
+              <Reveal key={s.title} delay={i * 0.1}>
+                <div className="group bg-paper hover:bg-ink transition-colors duration-500 p-8 md:p-10 h-full">
+                  <p className="eyebrow text-sand group-hover:text-stone transition-colors duration-500 mb-8">
+                    {s.number}
+                  </p>
+                  <h3 className="font-display text-2xl md:text-3xl text-ink group-hover:text-paper transition-colors duration-500 mb-4">
+                    {s.title}
+                  </h3>
+                  <p className="text-stone group-hover:text-paper/60 transition-colors duration-500 text-sm leading-relaxed">
+                    {s.description}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Selected projects ── */}
+      <section className="section-pad bg-bone border-t border-sand">
+        <div className="site-container">
+          <div className="mb-14">
+            <Reveal>
+              <p className="eyebrow mb-4">Selected Work</p>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <h2 className="font-display text-4xl md:text-5xl text-ink">
+                Recent
+                <br />
+                <em>projects</em>
+              </h2>
+            </Reveal>
+          </div>
+
+          <div className="divide-y divide-sand">
+            {projects.map((p, i) => (
+              <Reveal key={p.title} delay={i * 0.07}>
+                <div className="group py-8 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10 hover:translate-x-1 transition-transform duration-300">
+                  <div className="flex-shrink-0 w-full sm:w-44 lg:w-56">
+                    <Placeholder ratio={p.ratio} label={p.category} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="eyebrow mb-2">
+                      {p.category} &middot; {p.location}
+                    </p>
+                    <h3 className="font-display text-2xl md:text-3xl text-ink mb-1">{p.title}</h3>
+                    <p className="text-stone text-sm">{p.year}</p>
+                  </div>
+                  <span
+                    className="hidden sm:block font-display text-2xl text-stone group-hover:text-ink transition-colors duration-300"
+                    aria-hidden
+                  >
+                    →
+                  </span>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── About teaser ── */}
+      <section className="section-pad bg-paper border-t border-sand">
+        <div className="site-container">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+            <Reveal>
+              <Placeholder ratio="3/4" label="Studio — Eleanor Walsh" />
+            </Reveal>
+            <div>
+              <Reveal delay={0.1}>
+                <p className="eyebrow mb-6">About the Studio</p>
+              </Reveal>
+              <Reveal delay={0.2}>
+                <h2 className="font-display text-4xl md:text-5xl text-ink mb-6">
+                  Land as a medium,
+                  <br />
+                  <em>time as a collaborator</em>
+                </h2>
+              </Reveal>
+              <Reveal delay={0.3}>
+                <p className="text-stone text-sm leading-relaxed mb-4">
+                  Founded in 2015, Lunella Landscape has spent a decade developing a practice
+                  grounded in ecological sensitivity and material restraint. We believe the best
+                  gardens are those that improve with age.
+                </p>
+              </Reveal>
+              <Reveal delay={0.35}>
+                <p className="text-stone text-sm leading-relaxed mb-10">
+                  Our studio works closely with architects, interior designers, and private clients
+                  to create outdoor spaces as considered as the buildings they surround.
+                </p>
+              </Reveal>
+              <Reveal delay={0.42}>
+                <Link href="/about" className="btn-secondary">
+                  Our Philosophy
+                </Link>
+              </Reveal>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CtaBanner />
+    </>
+  )
+}

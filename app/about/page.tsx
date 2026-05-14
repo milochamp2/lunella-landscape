@@ -1,0 +1,204 @@
+﻿import type { Metadata } from 'next'
+import { Placeholder } from '@/components/placeholder'
+import { Reveal } from '@/components/reveal'
+import { CtaBanner } from '@/components/cta-banner'
+
+export const metadata: Metadata = {
+  title: 'About',
+  description:
+    'Lunella Landscape is a Melbourne landscape studio founded in 2015, creating ecologically sensitive and materially restrained outdoor environments across Victoria.',
+}
+
+const values = [
+  {
+    title: 'Ecological Sensitivity',
+    description:
+      'Every site is read for its existing ecology — soil, drainage, aspect, and native flora — before we propose a single plant or stone.',
+  },
+  {
+    title: 'Material Honesty',
+    description:
+      'We use materials that belong to the landscape: local bluestone, untreated timber, hand-selected gravels that read as natural within years of installation.',
+  },
+  {
+    title: 'Craft Over Spectacle',
+    description:
+      'We are not interested in trend-led design. Our gardens are resolved slowly, with care given to proportion, texture, and the passage of light through the day.',
+  },
+  {
+    title: 'Long-Term Relationship',
+    description:
+      'Many of our clients have worked with us for over a decade. We consider maintenance and seasonal evolution as integral to the design, not an afterthought.',
+  },
+]
+
+const team = [
+  {
+    name: 'Eleanor Walsh',
+    role: 'Founding Director & Lead Designer',
+    bio: 'Eleanor trained at the University of Melbourne and the Royal Botanic Gardens, London. Her work is informed by a decade studying gardens in Japan, the UK, and South Africa.',
+  },
+  {
+    name: 'James Okafor',
+    role: 'Head of Construction',
+    bio: 'James brings 18 years of stonemason and landscape construction experience. His eye for detail and material quality sets the physical standard for every project.',
+  },
+  {
+    name: 'Priya Sharma',
+    role: 'Senior Horticulturalist',
+    bio: 'Priya specialises in indigenous planting and complex mixed borders. She manages our maintenance program and leads all establishment planting on new projects.',
+  },
+]
+
+const recognition = [
+  { label: 'AILA Award', year: '2023', note: 'Residential Design' },
+  { label: 'AILA Award', year: '2022', note: 'Public Space' },
+  { label: 'Houses Magazine', year: '2023', note: 'Garden of the Year' },
+  { label: 'Vogue Living', year: '2024', note: 'Featured Studio' },
+]
+
+export default function AboutPage() {
+  return (
+    <>
+      {/* ── Header ── */}
+      <section className="section-pad bg-bone border-b border-sand">
+        <div className="site-container">
+          <Reveal>
+            <p className="eyebrow mb-8">About the Studio</p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <h1 className="font-display text-5xl md:text-7xl text-ink max-w-3xl leading-[1.05] mb-8">
+              A practice built
+              <br />
+              on <em>patience</em>
+            </h1>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <p className="text-stone text-sm leading-relaxed max-w-lg">
+              Founded in 2015 by Eleanor Walsh, Lunella Landscape grew from a conviction that
+              landscapes deserve the same rigour and care given to fine architecture. We are a
+              small, deliberate studio — and we intend to stay that way.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── Hero image ── */}
+      <section className="bg-paper">
+        <div className="site-container py-16">
+          <Reveal>
+            <Placeholder
+              ratio="2/1"
+              label="Heathcote Vineyard — Rural Estate"
+              className="w-full"
+            />
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── Philosophy ── */}
+      <section className="section-pad bg-bone border-t border-b border-sand">
+        <div className="site-container">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+            <Reveal>
+              <p className="eyebrow mb-6">Our Approach</p>
+              <h2 className="font-display text-4xl md:text-5xl text-ink leading-[1.1]">
+                Land as a medium,
+                <br />
+                <em>time as a collaborator</em>
+              </h2>
+            </Reveal>
+            <div className="space-y-5">
+              <Reveal delay={0.1}>
+                <p className="text-stone text-sm leading-relaxed">
+                  We approach each commission as a site-specific investigation. Before any design
+                  work begins, we spend time on the land — reading its topography, its seasonal
+                  rhythms, the quality of its light at different hours.
+                </p>
+              </Reveal>
+              <Reveal delay={0.18}>
+                <p className="text-stone text-sm leading-relaxed">
+                  This slow observation informs everything: which materials will belong here, which
+                  plants will thrive without excessive intervention, how the garden will move and
+                  change across decades.
+                </p>
+              </Reveal>
+              <Reveal delay={0.26}>
+                <p className="text-stone text-sm leading-relaxed">
+                  We are interested in gardens that improve with age — where the patina of weathered
+                  stone, the spread of established planting, and the character of mature trees become
+                  the garden&apos;s greatest assets.
+                </p>
+              </Reveal>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Values ── */}
+      <section className="section-pad bg-paper">
+        <div className="site-container">
+          <Reveal>
+            <p className="eyebrow mb-14">What We Believe</p>
+          </Reveal>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-sand">
+            {values.map((v, i) => (
+              <Reveal key={v.title} delay={i * 0.09}>
+                <div className="bg-paper p-8 md:p-10 h-full">
+                  <h3 className="font-display text-2xl text-ink mb-4">{v.title}</h3>
+                  <p className="text-stone text-sm leading-relaxed">{v.description}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Team ── */}
+      <section className="section-pad bg-bone border-t border-sand">
+        <div className="site-container">
+          <Reveal>
+            <p className="eyebrow mb-14">The Team</p>
+          </Reveal>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {team.map((member, i) => (
+              <Reveal key={member.name} delay={i * 0.1}>
+                <div>
+                  <Placeholder ratio="3/4" label={member.name} className="mb-6" />
+                  <p className="eyebrow mb-2">{member.role}</p>
+                  <h3 className="font-display text-2xl text-ink mb-3">{member.name}</h3>
+                  <p className="text-stone text-sm leading-relaxed">{member.bio}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Recognition ── */}
+      <section className="bg-paper border-t border-sand py-14">
+        <div className="site-container">
+          <Reveal>
+            <p className="eyebrow text-center mb-10">Recognition</p>
+          </Reveal>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-sand">
+            {recognition.map((item, i) => (
+              <Reveal key={i} delay={i * 0.08}>
+                <div className="bg-paper p-6 md:p-8 text-center">
+                  <p className="font-display text-xl text-ink mb-1">{item.label}</p>
+                  <p className="eyebrow mb-1">{item.year}</p>
+                  <p className="text-stone text-xs">{item.note}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <CtaBanner
+        heading="Work with us on your next project"
+        cta={{ label: 'Start a Conversation', href: '/contact' }}
+      />
+    </>
+  )
+}
