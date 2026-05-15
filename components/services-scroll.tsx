@@ -246,7 +246,7 @@ export function ServicesScroll() {
           <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 z-10" style={{ background: 'linear-gradient(to left, #1e1e1e, transparent)' }} />
           <div
             className="marquee-track flex gap-px"
-            style={{ animation: 'marquee 45s linear infinite', willChange: 'transform' }}
+            style={{ animation: 'marquee 28s linear infinite', willChange: 'transform' }}
           >
             {services.map((s) => <ServiceCard key={`a-${s.number}`} s={s} />)}
             {services.map((s) => <ServiceCard key={`b-${s.number}`} s={s} />)}
