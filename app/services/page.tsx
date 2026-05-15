@@ -123,7 +123,7 @@ const services = [
   {
     id: 'decking',
     number: '05',
-    title: 'Decking & Pergolas',
+    title: 'Decking',
     tagline: 'Our best work is underfoot — natural timber decks built to last a lifetime.',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
@@ -139,42 +139,72 @@ const services = [
     ),
     paragraphs: [
       'We take real pride in our decks. Natural timber is the material we love most for outdoor living — warm, honest, and only more beautiful as it weathers. Every deck we build is designed to feel like a natural extension of the home, not an afterthought.',
-      'Our pergolas follow the same philosophy: solid timber construction, clean proportions, and no shortcuts on joinery or fixings. We design and build structures that stand up to the Australian climate without sacrificing how they look.',
+      'Hardwood, merbau, spotted gum, ironbark — we select the right species for each site and build with no shortcuts on framing, fixings, or finish. A Lunella deck is built to improve with every season.',
     ],
     includes: [
       'Hardwood & spotted gum decking',
       'Merbau & ironbark decking',
-      'Custom pergola design & build',
       'Deck framing & substructure',
       'Balustrades & screening',
+      'Steps & level changes',
       'Oiling, sealing & long-term care',
     ],
   },
   {
-    id: 'maintenance',
+    id: 'concrete',
     number: '06',
-    title: 'Maintenance Programs',
-    tagline: 'Seasonal care that keeps your garden at its intended best.',
+    title: 'Concrete — Driveways & Paths',
+    tagline: 'Durable, well-finished concrete work that anchors the landscape for decades.',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
-        <circle cx="24" cy="24" r="14" />
-        <path d="M24 14 L24 24 L31 31" />
-        <path d="M24 8 L24 4" />
-        <path d="M38 14 L40.5 11.5" />
-        <path d="M40 24 L44 24" />
+        <path d="M14 8 L10 40 h28 L34 8 Z" />
+        <path d="M18 8 L16 40" />
+        <path d="M30 8 L32 40" />
+        <path d="M24 8 L24 40" />
       </svg>
     ),
     paragraphs: [
-      'A garden requires intelligent, ongoing attention to fulfil its design intent. Our maintenance program is not a contract gardening service — it is a continuation of the design process, carried out by people who understand what the garden is trying to become.',
-      'We offer tailored maintenance agreements from fortnightly visits to seasonal checks, managed by our senior horticulturalist.',
+      'Concrete done well is one of the most versatile and enduring surfaces in landscape design. We pour, finish, and detail driveways and paths that hold up to Australian conditions without cracking, staining, or looking tired within a few years.',
+      'We work with exposed aggregate, broom-finished, and honed concrete to achieve surfaces that are both practical and considered — matching the material to the project rather than defaulting to the same finish every time.',
     ],
     includes: [
-      'Fortnightly or monthly visits',
-      'Seasonal pruning & cutting back',
-      'Fertilisation & soil care',
-      'Weed management',
-      'Irrigation monitoring',
-      'Annual design review',
+      'Driveway design & construction',
+      'Pathways & garden paths',
+      'Exposed aggregate concrete',
+      'Broom & honed finishes',
+      'Footings & base preparation',
+      'Expansion joints & drainage detail',
+    ],
+  },
+  {
+    id: 'fencing',
+    number: '07',
+    title: 'Fencing',
+    tagline: 'All aspects of hard and soft scapes — boundary, privacy, and structure.',
+    icon: (
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+        <path d="M10 14 L10 38" />
+        <path d="M10 14 L14 10 L18 14" />
+        <path d="M18 14 L18 38" />
+        <path d="M18 14 L22 10 L26 14" />
+        <path d="M26 14 L26 38" />
+        <path d="M26 14 L30 10 L34 14" />
+        <path d="M34 14 L34 38" />
+        <path d="M10 24 h24" />
+        <path d="M10 32 h24" />
+      </svg>
+    ),
+    paragraphs: [
+      'Fencing defines the boundary between spaces, and we treat it as an integral part of the landscape rather than an afterthought. Our fencing work spans all aspects of the hardscape and softscape — from robust structural boundaries to decorative screens that frame planting and let light through.',
+      'We work with natural timber, steel, Colorbond, and composite materials, selecting the right solution for the site, the aesthetic, and the maintenance expectations of each client.',
+    ],
+    includes: [
+      'Timber paling & picket fencing',
+      'Steel & Colorbond fencing',
+      'Decorative screening panels',
+      'Retaining & boundary walls',
+      'Garden edging & soft landscape borders',
+      'Gates & entry structures',
     ],
   },
 ]

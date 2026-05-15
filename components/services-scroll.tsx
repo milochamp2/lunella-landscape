@@ -56,8 +56,8 @@ const services = [
   },
   {
     number: '05',
-    title: 'Decking & Pergolas',
-    tagline: 'Natural timber decks and pergolas built to last — our finest work.',
+    title: 'Decking',
+    tagline: 'Natural timber decks built to last — our finest work underfoot.',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
         <rect x="8" y="28" width="32" height="12" rx="1" />
@@ -133,7 +133,7 @@ const services = [
   {
     number: '10',
     title: 'Fencing',
-    tagline: 'Timber, steel, and composite fencing that defines boundaries beautifully.',
+    tagline: 'All aspects of hard and soft scapes — boundary, privacy, and structure.',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
         <path d="M10 14 L10 38" />
@@ -150,8 +150,8 @@ const services = [
   },
   {
     number: '11',
-    title: 'Driveways & Concreting',
-    tagline: 'Durable, well-finished driveways and concrete work that lasts.',
+    title: 'Concrete — Driveways & Paths',
+    tagline: 'Durable, well-finished concrete driveways and paths built to last.',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
         <path d="M14 8 L10 40 h28 L34 8 Z" />

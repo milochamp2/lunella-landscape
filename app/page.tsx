@@ -153,14 +153,16 @@ export default function HomePage() {
         <div className="site-container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <Reveal className="flex justify-center items-center py-8">
-              <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden">
-                <Image
-                  src="/lunella2ndlogo.png"
-                  alt="Lunella Landscapes"
-                  width={400}
-                  height={400}
-                  className="w-full h-full object-cover object-center"
-                />
+              <div className="w-72 h-72 md:w-96 md:h-96 rounded-full bg-ink flex flex-col items-center justify-center gap-2 border-4 border-ink">
+                <span
+                  className="font-display font-black text-paper leading-none tracking-tight"
+                  style={{ fontSize: 'clamp(2.8rem, 8vw, 4.5rem)' }}
+                >
+                  Lunella
+                </span>
+                <span className="font-sans font-medium text-paper/70 tracking-[0.25em] uppercase text-xs md:text-sm">
+                  Landscapes
+                </span>
               </div>
             </Reveal>
             <div>
