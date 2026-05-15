@@ -64,7 +64,7 @@ export default function HomePage() {
             </h1>
           </Reveal>
           <Reveal delay={0.24}>
-            <p className="text-paper/90 text-sm leading-[1.5] mb-5 md:mb-7 max-w-xs sm:max-w-sm md:max-w-md">
+            <p className="text-paper/90 text-sm leading-[1.5] mb-3 md:mb-5 max-w-xs sm:max-w-sm md:max-w-md">
               Lunella Landscapes is a landscape company creating considered outdoor environments —
               from intimate city gardens to expansive rural estates across Victoria.
             </p>
