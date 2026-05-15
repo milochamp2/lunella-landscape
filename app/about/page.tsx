@@ -6,7 +6,7 @@ import { CtaBanner } from '@/components/cta-banner'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Lunella Landscapes is a Melbourne landscape company founded in 2015, creating ecologically sensitive and materially restrained outdoor environments across Victoria.',
+    'Lunella Landscapes is a Melbourne landscape company established in 2025, bringing over 20 years of industry experience to ecologically sensitive and materially restrained outdoor environments across Victoria.',
 }
 
 const values = [
@@ -78,7 +78,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.2}>
             <p className="text-stone text-sm leading-relaxed max-w-lg">
-              A Melbourne landscape company named for the beauty that lives in moonlight — and the belief that the finest outdoor spaces are the ones that reveal themselves at every hour of the day.
+              Established in 2025, Lunella Landscapes brings over 20 years of industry experience to every project — creating modern, ecologically grounded outdoor environments across Melbourne and Victoria.
             </p>
           </Reveal>
         </div>
@@ -90,10 +90,10 @@ export default function AboutPage() {
           <Reveal>
             <div className="image-frame aspect-[2/1] w-full">
               <Image
-                src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1400&q=80"
-                alt="Stone garden path — Heathcote Vineyard"
+                src="/projects/heathmont/h4.jpg"
+                alt="Stone paving and pool — Heathmont project"
                 fill
-                className="object-cover"
+                className="object-cover object-center"
                 sizes="90vw"
               />
             </div>

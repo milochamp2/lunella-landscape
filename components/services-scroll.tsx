@@ -206,8 +206,8 @@ export function ServicesScroll() {
       {/* ── Photo banner ── */}
       <div className="relative flex items-center justify-center" style={{ height: '50vh', minHeight: '280px' }}>
         <Image
-          src="/projects/dingley/d2.jpg"
-          alt="Dingley garden — stone paving and water feature"
+          src="/projects/heathmont/h4.jpg"
+          alt="Heathmont residence — stone paving and pool"
           fill
           className="object-cover object-center"
           sizes="100vw"

@@ -6,30 +6,30 @@ import { ServicesScroll } from '@/components/services-scroll'
 
 const projects = [
   {
-    title: 'Dingley Residence',
-    category: 'Stone Paving & Water Feature',
-    location: 'Dingley Village, VIC',
-    year: '2024',
-    src: '/projects/dingley/d2.jpg',
-    href: '/projects/dingley',
+    title: 'Heathmont Residence',
+    category: 'Stone Paving & Pool Surrounds',
+    location: 'Heathmont, VIC',
+    year: '2025',
+    src: '/projects/heathmont/h4.jpg',
+    href: '/projects/heathmont',
     aspect: 'aspect-[4/3]',
   },
   {
     title: 'Parkville Courtyard',
     category: 'Stone Paving & Screening',
     location: 'Parkville, VIC',
-    year: '2024',
-    src: '/projects/parkville/pk1.jpg',
+    year: '2025',
+    src: '/projects/parkville/pk3.jpg',
     href: '/projects/parkville',
     aspect: 'aspect-[4/3]',
   },
   {
-    title: 'Wantirna Estate',
-    category: 'Landscape Design & Decking',
-    location: 'Wantirna, VIC',
-    year: '2023',
-    src: '/projects/wantirna/w11.jpg',
-    href: '/projects/wantirna',
+    title: 'Flemington Terrace',
+    category: 'Decking & Outdoor Living',
+    location: 'Flemington, VIC',
+    year: '2025',
+    src: '/projects/flemington/fm5.jpg',
+    href: '/projects/flemington',
     aspect: 'aspect-[4/3]',
   },
 ]
@@ -149,14 +149,14 @@ export default function HomePage() {
       </section>
 
       {/* ── About teaser ── */}
-      <section className="section-pad bg-paper border-t border-sand">
+      <section className="py-14 md:py-20 bg-paper border-t border-sand">
         <div className="site-container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
-            <Reveal className="flex justify-center items-center py-4 md:py-8">
-              <div className="w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full bg-ink flex flex-col items-center justify-center gap-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+            <Reveal className="flex justify-center items-center">
+              <div className="w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 rounded-full bg-ink flex flex-col items-center justify-center gap-2">
                 <span
                   className="font-display font-black text-paper leading-none tracking-tight"
-                  style={{ fontSize: 'clamp(2rem, 7vw, 4rem)' }}
+                  style={{ fontSize: 'clamp(1.8rem, 6vw, 3.5rem)' }}
                 >
                   Lunella
                 </span>
@@ -167,24 +167,24 @@ export default function HomePage() {
             </Reveal>
             <div>
               <Reveal delay={0.1}>
-                <p className="eyebrow mb-6">About the Company</p>
+                <p className="eyebrow mb-4">About the Company</p>
               </Reveal>
               <Reveal delay={0.2}>
-                <h2 className="font-display text-4xl md:text-5xl font-bold text-ink mb-6">
-                  Land as a medium,
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-ink mb-4">
+                  Modern landscapes,
                   <br />
-                  time as a collaborator
+                  naturally grounded.
                 </h2>
               </Reveal>
               <Reveal delay={0.3}>
-                <p className="text-stone text-sm leading-relaxed mb-4">
-                  Founded in 2015, Lunella Landscapes has spent a decade developing a practice
-                  grounded in ecological sensitivity and material restraint. We believe the best
-                  gardens are those that improve with age.
+                <p className="text-stone text-sm leading-relaxed mb-3">
+                  Established in 2025, Lunella Landscapes brings over 20 years of industry
+                  experience to every project — grounded in ecological sensitivity and material
+                  restraint. We believe the best gardens are those that improve with age.
                 </p>
               </Reveal>
               <Reveal delay={0.35}>
-                <p className="text-stone text-sm leading-relaxed mb-10">
+                <p className="text-stone text-sm leading-relaxed mb-8">
                   Our company works closely with architects, interior designers, and private clients
                   to create outdoor spaces as considered as the buildings they surround.
                 </p>

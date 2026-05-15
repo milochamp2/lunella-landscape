@@ -72,7 +72,7 @@ export const projects: Project[] = [
     title: 'Flemington',
     location: 'Flemington, VIC',
     suburb: 'Flemington',
-    images: imgs('flemington', ['fm1.jpg', 'fm2.jpg', 'fm3.jpg', 'fm4.jpg', 'fm5.jpg', 'fm6.jpg']),
+    images: imgs('flemington', ['fm5.jpg', 'fm1.jpg', 'fm2.jpg', 'fm3.jpg', 'fm4.jpg', 'fm6.jpg']),
   },
   {
     slug: 'footscray',
@@ -93,7 +93,7 @@ export const projects: Project[] = [
     title: 'Heathmont',
     location: 'Heathmont, VIC',
     suburb: 'Heathmont',
-    images: imgs('heathmont', ['h1.jpg', 'h2.jpg', 'h3.jpg', 'h4.jpg', 'h5.jpg', 'h6.jpg']),
+    images: imgs('heathmont', ['h4.jpg', 'h5.jpg', 'h6.jpg', 'h1.jpg', 'h2.jpg', 'h3.jpg']),
   },
   {
     slug: 'malvern',
