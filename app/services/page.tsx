@@ -9,12 +9,27 @@ export const metadata: Metadata = {
     'From landscape design to stonework and ongoing maintenance — Lunella Landscape offers a complete landscape service across Melbourne and Victoria.',
 }
 
+function Icon({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="w-14 h-14 flex items-center justify-center rounded-full border border-sand bg-bone mb-6 text-slate">
+      {children}
+    </div>
+  )
+}
+
 const services = [
   {
     id: 'design',
     number: '01',
     title: 'Landscape Design',
     tagline: 'Spatial thinking that resolves the relationship between structure, plant, and light.',
+    icon: (
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+        <path d="M8 40 L24 10 L40 40" />
+        <path d="M14 28 h20" />
+        <path d="M24 10 C24 10 18 20 24 26 C30 20 24 10 24 10Z" />
+      </svg>
+    ),
     paragraphs: [
       'Our design process begins with a thorough site analysis — examining aspect, drainage, existing vegetation, and the architectural language of the building. From this we develop a coherent spatial concept before drawing a single line.',
       'We produce full design documentation including site plan, sections, elevations, planting plans, material schedules, and detailed specifications — resolved to a standard that allows precise construction and a faithful result.',
@@ -33,6 +48,13 @@ const services = [
     number: '02',
     title: 'Garden Installation',
     tagline: 'Expert construction and planting by our in-house team, end to end.',
+    icon: (
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+        <rect x="8" y="30" width="32" height="10" rx="1" />
+        <path d="M16 30 C16 22 12 14 24 10 C36 14 32 22 32 30" />
+        <path d="M24 10 L24 30" />
+      </svg>
+    ),
     paragraphs: [
       'We self-perform all construction and planting with our permanent team — no subcontracting to unknown parties. This gives us direct control over quality at every stage, from bulk earthworks through to establishment planting and aftercare.',
       'Our project manager coordinates the full build sequence, maintains a rigorous site programme, and keeps you informed at every milestone.',
@@ -51,6 +73,14 @@ const services = [
     number: '03',
     title: 'Natural Stone Paving & Brickwork',
     tagline: 'Beautifully laid natural stone and brickwork that grounds a garden for generations.',
+    icon: (
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+        <rect x="8" y="8" width="14" height="14" rx="1" />
+        <rect x="26" y="8" width="14" height="14" rx="1" />
+        <rect x="8" y="26" width="14" height="14" rx="1" />
+        <rect x="26" y="26" width="14" height="14" rx="1" />
+      </svg>
+    ),
     paragraphs: [
       'We specialise in natural stone paving — the kind that develops character over time and never looks out of place in the landscape. Every surface we lay is selected for its texture, tone, and durability underfoot.',
       'Our brickwork complements our paving work, offering clean, considered edging, retaining walls, and feature details that give a garden its structure. We do not use materials that fake age or require constant upkeep to look presentable.',
@@ -69,6 +99,14 @@ const services = [
     number: '04',
     title: 'Planting Schemes',
     tagline: 'Considered plant communities that thrive with minimal intervention.',
+    icon: (
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+        <path d="M24 40 L24 20" />
+        <path d="M24 20 C24 20 14 18 12 10 C20 8 26 14 24 20Z" />
+        <path d="M24 28 C24 28 34 26 36 18 C28 16 22 22 24 28Z" />
+        <path d="M16 40 h16" />
+      </svg>
+    ),
     paragraphs: [
       'Our planting philosophy draws on ecological principles — we design communities of plants that support each other, respond to site conditions, and evolve over time into something richer than the sum of their parts.',
       'We work with indigenous Victorian species, Australian natives, and carefully selected exotic perennials and grasses. We do not use invasive species or plants that require unsustainable levels of water.',
@@ -87,6 +125,18 @@ const services = [
     number: '05',
     title: 'Decking & Pergolas',
     tagline: 'Our best work is underfoot — natural timber decks built to last a lifetime.',
+    icon: (
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+        <rect x="8" y="28" width="32" height="12" rx="1" />
+        <path d="M8 28 L8 16" />
+        <path d="M40 28 L40 16" />
+        <path d="M8 16 h32" />
+        <path d="M14 16 L14 28" />
+        <path d="M20 16 L20 28" />
+        <path d="M26 16 L26 28" />
+        <path d="M32 16 L32 28" />
+      </svg>
+    ),
     paragraphs: [
       'We take real pride in our decks. Natural timber is the material we love most for outdoor living — warm, honest, and only more beautiful as it weathers. Every deck we build is designed to feel like a natural extension of the home, not an afterthought.',
       'Our pergolas follow the same philosophy: solid timber construction, clean proportions, and no shortcuts on joinery or fixings. We design and build structures that stand up to the Australian climate without sacrificing how they look.',
@@ -105,6 +155,15 @@ const services = [
     number: '06',
     title: 'Maintenance Programs',
     tagline: 'Seasonal care that keeps your garden at its intended best.',
+    icon: (
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+        <circle cx="24" cy="24" r="14" />
+        <path d="M24 14 L24 24 L31 31" />
+        <path d="M24 8 L24 4" />
+        <path d="M38 14 L40.5 11.5" />
+        <path d="M40 24 L44 24" />
+      </svg>
+    ),
     paragraphs: [
       'A garden requires intelligent, ongoing attention to fulfil its design intent. Our maintenance program is not a contract gardening service — it is a continuation of the design process, carried out by people who understand what the garden is trying to become.',
       'We offer tailored maintenance agreements from fortnightly visits to seasonal checks, managed by our senior horticulturalist.',
@@ -193,6 +252,7 @@ export default function ServicesPage() {
               <div key={s.id} id={s.id} className="py-16 md:py-20 scroll-mt-20">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
                   <Reveal className="md:col-span-4">
+                    <Icon>{s.icon}</Icon>
                     <p className="eyebrow mb-4">{s.number}</p>
                     <h2 className="font-display text-3xl md:text-4xl text-ink mb-3">{s.title}</h2>
                     <p className="font-display text-lg italic text-stone">{s.tagline}</p>
