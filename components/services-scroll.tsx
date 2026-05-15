@@ -203,9 +203,8 @@ export function ServicesScroll() {
   return (
     <section className="border-t border-slate overflow-hidden">
 
-      {/* ── Photo banner with centred logo ── */}
-      <div className="relative h-[55vh] min-h-[360px] flex items-center justify-center">
-        {/* Background photo */}
+      {/* ── Photo banner ── */}
+      <div className="relative flex items-center justify-center" style={{ height: '60vh', minHeight: '400px' }}>
         <Image
           src="/projects/dingley/d2.jpg"
           alt="Dingley garden — stone paving and water feature"
@@ -213,24 +212,26 @@ export function ServicesScroll() {
           className="object-cover object-center"
           sizes="100vw"
         />
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-ink/55" />
-        {/* Bottom fade into services strip */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#1e1e1e] to-transparent" />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-ink/50" />
+        {/* Bottom fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#1e1e1e] to-transparent" />
 
-        {/* Centred label */}
-        <div className="relative z-10 flex flex-col items-center gap-4">
-          <p className="eyebrow text-paper/70 tracking-widest">What We Do</p>
-          <h2 className="font-display text-4xl md:text-6xl font-bold text-paper text-center drop-shadow-lg">
+        {/* Text — truly centred with padding to account for fade */}
+        <div className="relative z-10 text-center px-6 pb-8">
+          <p className="eyebrow text-paper/60 mb-4">What We Do</p>
+          <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-paper leading-tight">
             Craft at every scale
           </h2>
         </div>
       </div>
 
       {/* ── Services marquee strip ── */}
-      <div className="relative py-10 md:py-14" style={{ backgroundColor: '#1e1e1e' }}>
-        {/* View All link */}
-        <div className="site-container mb-10 flex justify-end">
+      <div className="relative pb-12 pt-6" style={{ backgroundColor: '#1e1e1e' }}>
+
+        {/* Header row: left label + right link, aligned with cards */}
+        <div className="site-container flex items-center justify-between mb-8">
+          <p className="eyebrow text-stone">Our Services</p>
           <Link
             href="/services"
             className="eyebrow text-stone hover:text-paper transition-colors duration-200 inline-flex items-center gap-2"
@@ -243,19 +244,15 @@ export function ServicesScroll() {
         <div className="marquee-wrapper relative overflow-hidden">
           <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 z-10" style={{ background: 'linear-gradient(to right, #1e1e1e, transparent)' }} />
           <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 z-10" style={{ background: 'linear-gradient(to left, #1e1e1e, transparent)' }} />
-
           <div
             className="marquee-track flex gap-px"
             style={{ animation: 'marquee 45s linear infinite', willChange: 'transform' }}
           >
-            {services.map((s) => (
-              <ServiceCard key={`a-${s.number}`} s={s} />
-            ))}
-            {services.map((s) => (
-              <ServiceCard key={`b-${s.number}`} s={s} />
-            ))}
+            {services.map((s) => <ServiceCard key={`a-${s.number}`} s={s} />)}
+            {services.map((s) => <ServiceCard key={`b-${s.number}`} s={s} />)}
           </div>
         </div>
+
       </div>
 
     </section>
