@@ -6,7 +6,7 @@ import Link from 'next/link'
 const services = [
   {
     number: '01',
-    title: 'Consultation, Vision & Design',
+    title: 'Vision, Design & Build',
     tagline: 'We listen, walk the site, and shape a clear direction — ideas and experience, before anything goes in the ground.',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">

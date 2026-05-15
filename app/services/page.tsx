@@ -21,7 +21,7 @@ const services = [
   {
     id: 'design',
     number: '01',
-    title: 'Consultation, Vision & Design',
+    title: 'Vision, Design & Build',
     tagline: 'Every project starts with a conversation — we listen, walk the site, and shape a clear direction together.',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
