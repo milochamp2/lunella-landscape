@@ -18,24 +18,23 @@ export function ProjectGallery({ images }: ProjectGalleryProps) {
 
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
+      <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
         {images.map((img, i) => (
           <button
             key={img.src}
             onClick={() => open(i)}
-            className={`group relative image-frame overflow-hidden cursor-zoom-in ${
-              i === 0 ? 'sm:col-span-2 aspect-[16/9]' : 'aspect-[4/3]'
-            }`}
+            className="group relative w-full break-inside-avoid overflow-hidden block cursor-zoom-in"
             aria-label={`View full size: ${img.alt}`}
           >
             <Image
               src={img.src}
               alt={img.alt}
-              fill
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
-              sizes="(max-width: 640px) 100vw, 50vw"
+              width={800}
+              height={600}
+              className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
-            <div className="absolute inset-0 bg-ink/0 group-hover:bg-ink/20 transition-colors duration-300 flex items-center justify-center">
+            <div className="absolute inset-0 bg-ink/0 group-hover:bg-ink/25 transition-colors duration-300 flex items-center justify-center">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"

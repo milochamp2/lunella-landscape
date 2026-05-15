@@ -1,106 +1,155 @@
 export interface Project {
   slug: string
   title: string
-  category: string
   location: string
-  year: string
-  description: string
-  coverSrc: string
-  images: { src: string; alt: string }[]
+  suburb: string
+  images: string[]
+}
+
+function imgs(folder: string, files: string[]): string[] {
+  return files.map((f) => `/projects/${folder}/${f}`)
 }
 
 export const projects: Project[] = [
   {
-    slug: 'fernside-residence',
-    title: 'The Fernside Residence',
-    category: 'Private Garden',
-    location: 'Toorak, VIC',
-    year: '2024',
-    description:
-      'A formal garden reimagined for contemporary living. Structured bluestone paths, clipped hedges, and a central reflecting pool anchor the design while allowing seasonal planting to evolve with the year.',
-    coverSrc: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80',
-    images: [
-      { src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=80', alt: 'Fernside garden entry path' },
-      { src: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1400&q=80', alt: 'Fernside formal garden beds' },
-      { src: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1400&q=80', alt: 'Fernside reflecting pool' },
-      { src: 'https://images.unsplash.com/photo-1444628838545-ac4016a5418a?auto=format&fit=crop&w=1400&q=80', alt: 'Fernside terrace detail' },
-    ],
+    slug: 'canterbury',
+    title: 'Canterbury',
+    location: 'Canterbury, VIC',
+    suburb: 'Canterbury',
+    images: imgs('canterbury', ['cnt1.jpg', 'cnt2.jpg', 'cnt3.jpg']),
   },
   {
-    slug: 'merri-creek-commons',
-    title: 'Merri Creek Commons',
-    category: 'Community Space',
+    slug: 'capelsound',
+    title: 'Capel Sound',
+    location: 'Capel Sound, VIC',
+    suburb: 'Capel Sound',
+    images: imgs('capelsound', ['cp1.jpg', 'cp2.jpg', 'cp3.jpg', 'cp4.jpg']),
+  },
+  {
+    slug: 'carnegie',
+    title: 'Carnegie',
+    location: 'Carnegie, VIC',
+    suburb: 'Carnegie',
+    images: imgs('carnegie', ['cr1.jpg', 'cr2.jpg', 'cr3.jpg', 'cr4.jpg', 'cr5.jpg', 'cr6.jpg']),
+  },
+  {
+    slug: 'caufield',
+    title: 'Caulfield',
+    location: 'Caulfield, VIC',
+    suburb: 'Caulfield',
+    images: imgs('caufield', ['ca1.jpg', 'ca2.jpg', 'ca3.jpg']),
+  },
+  {
+    slug: 'clifftonhill',
+    title: 'Clifton Hill',
+    location: 'Clifton Hill, VIC',
+    suburb: 'Clifton Hill',
+    images: imgs('clifftonhill', ['c4.jpg', 'c5.jpg', 'c6.jpg']),
+  },
+  {
+    slug: 'croydon',
+    title: 'Croydon',
+    location: 'Croydon, VIC',
+    suburb: 'Croydon',
+    images: imgs('croydon', ['cr1.jpg', 'cr2.jpg', 'cr3.jpg', 'cr4.jpg', 'cr5.jpg', 'cr6.jpg', 'cr7.jpg']),
+  },
+  {
+    slug: 'dingley',
+    title: 'Dingley',
+    location: 'Dingley Village, VIC',
+    suburb: 'Dingley',
+    images: imgs('dingley', ['d1.jpg', 'd2.jpg', 'd3.jpg', 'd4.jpg', 'd5.jpg']),
+  },
+  {
+    slug: 'fitzroy',
+    title: 'Fitzroy',
+    location: 'Fitzroy, VIC',
+    suburb: 'Fitzroy',
+    images: imgs('fitzroy', ['f1.jpg', 'f2.jpg', 'f3.jpg', 'f4.jpg', 'f5.jpg', 'f6.jpg', 'f7.jpg']),
+  },
+  {
+    slug: 'flemington',
+    title: 'Flemington',
+    location: 'Flemington, VIC',
+    suburb: 'Flemington',
+    images: imgs('flemington', ['fm1.jpg', 'fm2.jpg', 'fm3.jpg', 'fm4.jpg', 'fm5.jpg', 'fm6.jpg']),
+  },
+  {
+    slug: 'footscray',
+    title: 'Footscray',
+    location: 'Footscray, VIC',
+    suburb: 'Footscray',
+    images: imgs('footscray', ['fs1.jpg', 'fs2.jpg', 'fs3.jpg']),
+  },
+  {
+    slug: 'hawthorn',
+    title: 'Hawthorn',
+    location: 'Hawthorn, VIC',
+    suburb: 'Hawthorn',
+    images: imgs('hawthorn', ['hw1.jpg', 'hw2.jpg']),
+  },
+  {
+    slug: 'heathmont',
+    title: 'Heathmont',
+    location: 'Heathmont, VIC',
+    suburb: 'Heathmont',
+    images: imgs('heathmont', ['h1.jpg', 'h2.jpg', 'h3.jpg', 'h4.jpg', 'h5.jpg', 'h6.jpg']),
+  },
+  {
+    slug: 'malvern',
+    title: 'Malvern',
+    location: 'Malvern, VIC',
+    suburb: 'Malvern',
+    images: imgs('malvern', ['mv1.jpg', 'mv2.jpg', 'mv3.jpg']),
+  },
+  {
+    slug: 'mt-waverly',
+    title: 'Mt Waverley',
+    location: 'Mt Waverley, VIC',
+    suburb: 'Mt Waverley',
+    images: imgs('mt-waverly', ['m1.jpg', 'm2.jpg', 'm3.jpg']),
+  },
+  {
+    slug: 'northcote',
+    title: 'Northcote',
     location: 'Northcote, VIC',
-    year: '2024',
-    description:
-      'A community gathering space that blends native riparian planting with robust public infrastructure. Permeable paving, rain gardens, and interpretive planting acknowledge the ecological history of the Merri Creek corridor.',
-    coverSrc: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80',
-    images: [
-      { src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1400&q=80', alt: 'Merri Creek commons aerial' },
-      { src: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1400&q=80', alt: 'Merri Creek native planting' },
-      { src: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=80', alt: 'Merri Creek seating area' },
-    ],
+    suburb: 'Northcote',
+    images: imgs('northcote', ['nt1.jpg', 'nt2.jpg', 'nt3.jpg', 'nt4.jpg']),
   },
   {
-    slug: 'heathcote-vineyard',
-    title: 'Heathcote Vineyard',
-    category: 'Rural Estate',
-    location: 'Heathcote, VIC',
-    year: '2023',
-    description:
-      'An estate garden that draws its palette directly from the surrounding landscape — ironstone gravels, silver-leafed natives, and windbreak plantings that echo the rhythm of the vineyard rows beyond.',
-    coverSrc: 'https://images.unsplash.com/photo-1470058869966-2a3a9d1399b1?auto=format&fit=crop&w=1200&q=80',
-    images: [
-      { src: 'https://images.unsplash.com/photo-1470058869966-2a3a9d1399b1?auto=format&fit=crop&w=1400&q=80', alt: 'Heathcote vineyard entrance' },
-      { src: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=80', alt: 'Heathcote estate garden' },
-      { src: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1400&q=80', alt: 'Heathcote rural landscape' },
-      { src: 'https://images.unsplash.com/photo-1566438480900-0609be27a4be?auto=format&fit=crop&w=1400&q=80', alt: 'Heathcote planting detail' },
-    ],
+    slug: 'parkville',
+    title: 'Parkville',
+    location: 'Parkville, VIC',
+    suburb: 'Parkville',
+    images: imgs('parkville', ['pk1.jpg', 'pk2.jpg', 'pk3.jpg']),
   },
   {
-    slug: 'collins-quarter-rooftop',
-    title: 'Collins Quarter Rooftop',
-    category: 'Commercial',
-    location: 'Melbourne CBD',
-    year: '2023',
-    description:
-      'A rooftop garden that transforms underutilised commercial space into a productive green amenity. Modular raised beds, a drip-feed irrigation system, and robust wind-tolerant planting deliver year-round greenery at elevation.',
-    coverSrc: 'https://images.unsplash.com/photo-1444628838545-ac4016a5418a?auto=format&fit=crop&w=1200&q=80',
-    images: [
-      { src: 'https://images.unsplash.com/photo-1444628838545-ac4016a5418a?auto=format&fit=crop&w=1400&q=80', alt: 'Collins Quarter rooftop overview' },
-      { src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=80', alt: 'Collins Quarter raised beds' },
-      { src: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1400&q=80', alt: 'Collins Quarter planting' },
-    ],
+    slug: 'richmond',
+    title: 'Richmond',
+    location: 'Richmond, VIC',
+    suburb: 'Richmond',
+    images: imgs('richmond', ['rc1.jpg', 'rc2.jpg', 'rc3.jpg']),
   },
   {
-    slug: 'south-yarra-courtyard',
-    title: 'South Yarra Courtyard',
-    category: 'Private Garden',
-    location: 'South Yarra, VIC',
-    year: '2022',
-    description:
-      'A compact inner-city courtyard transformed through layered planting and considered stonework. A single mature olive anchors the space; ground level is given over to decomposed granite and creeping thyme.',
-    coverSrc: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=80',
-    images: [
-      { src: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1400&q=80', alt: 'South Yarra courtyard overview' },
-      { src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=80', alt: 'South Yarra planting detail' },
-      { src: 'https://images.unsplash.com/photo-1553774781-c98e2e0a6e89?auto=format&fit=crop&w=1400&q=80', alt: 'South Yarra stonework' },
-    ],
+    slug: 'stkilda',
+    title: 'St Kilda',
+    location: 'St Kilda, VIC',
+    suburb: 'St Kilda',
+    images: imgs('stkilda', ['st1.jpg', 'st2.jpg', 'st3.jpg', 'st4.jpg', 'st5.jpg']),
   },
   {
-    slug: 'portsea-coastal-garden',
-    title: 'Portsea Coastal Garden',
-    category: 'Private Garden',
-    location: 'Portsea, VIC',
-    year: '2022',
-    description:
-      'A coastal garden designed to endure salt winds and sandy soils. Native ti-trees, coastal wattles, and a sweeping lawn create a relaxed connection between the house and the dunes beyond.',
-    coverSrc: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=80',
-    images: [
-      { src: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1400&q=80', alt: 'Portsea coastal landscape' },
-      { src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1400&q=80', alt: 'Portsea dune planting' },
-      { src: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=80', alt: 'Portsea garden path' },
-    ],
+    slug: 'upwey',
+    title: 'Upwey',
+    location: 'Upwey, VIC',
+    suburb: 'Upwey',
+    images: imgs('upwey', ['u1.jpg', 'u2.jpg']),
+  },
+  {
+    slug: 'wantirna',
+    title: 'Wantirna',
+    location: 'Wantirna, VIC',
+    suburb: 'Wantirna',
+    images: imgs('wantirna', ['w4.jpg', 'w5.jpg', 'w7.jpg', 'w8.jpg', 'w9.jpg', 'w10.jpg', 'w11.jpg', 'w12.jpg', 'w13.jpg', 'w14.jpg']),
   },
 ]
 
