@@ -218,34 +218,25 @@ export function ServicesScroll() {
         {/* Bottom fade into services strip */}
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#1e1e1e] to-transparent" />
 
-        {/* Centred logo */}
-        <div className="relative z-10 flex flex-col items-center gap-6">
-          <Image
-            src="/lunellalogo.png"
-            alt="Lunella Landscapes"
-            width={220}
-            height={220}
-            className="w-40 h-40 md:w-52 md:h-52 object-contain drop-shadow-2xl"
-          />
+        {/* Centred label */}
+        <div className="relative z-10 flex flex-col items-center gap-4">
           <p className="eyebrow text-paper/70 tracking-widest">What We Do</p>
+          <h2 className="font-display text-4xl md:text-6xl font-bold text-paper text-center drop-shadow-lg">
+            Craft at every scale
+          </h2>
         </div>
       </div>
 
       {/* ── Services marquee strip ── */}
       <div className="relative py-10 md:py-14" style={{ backgroundColor: '#1e1e1e' }}>
-        {/* Header row */}
-        <div className="site-container mb-10">
-          <div className="flex items-end justify-between gap-6">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-paper">
-              Craft at every scale
-            </h2>
-            <Link
-              href="/services"
-              className="eyebrow text-stone hover:text-paper transition-colors duration-200 inline-flex items-center gap-2 shrink-0"
-            >
-              View All <span aria-hidden>→</span>
-            </Link>
-          </div>
+        {/* View All link */}
+        <div className="site-container mb-10 flex justify-end">
+          <Link
+            href="/services"
+            className="eyebrow text-stone hover:text-paper transition-colors duration-200 inline-flex items-center gap-2"
+          >
+            View All <span aria-hidden>→</span>
+          </Link>
         </div>
 
         {/* Marquee */}
