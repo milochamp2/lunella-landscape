@@ -6,36 +6,31 @@ import { ServicesScroll } from '@/components/services-scroll'
 
 const projects = [
   {
-    title: 'The Fernside Residence',
-    category: 'Private Garden',
-    location: 'Toorak, VIC',
+    title: 'Dingley Residence',
+    category: 'Stone Paving & Water Feature',
+    location: 'Dingley Village, VIC',
     year: '2024',
-    src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80',
+    src: '/projects/dingley/d2.jpg',
+    href: '/projects/dingley',
     aspect: 'aspect-[4/3]',
   },
   {
-    title: 'Merri Creek Commons',
-    category: 'Community Space',
-    location: 'Northcote, VIC',
+    title: 'Parkville Courtyard',
+    category: 'Stone Paving & Screening',
+    location: 'Parkville, VIC',
     year: '2024',
-    src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1000&q=80',
-    aspect: 'aspect-[16/9]',
-  },
-  {
-    title: 'Heathcote Vineyard',
-    category: 'Rural Estate',
-    location: 'Heathcote, VIC',
-    year: '2023',
-    src: 'https://images.unsplash.com/photo-1470058869966-2a3a9d1399b1?auto=format&fit=crop&w=800&q=80',
+    src: '/projects/parkville/pk1.jpg',
+    href: '/projects/parkville',
     aspect: 'aspect-[4/3]',
   },
   {
-    title: 'Collins Quarter Rooftop',
-    category: 'Commercial',
-    location: 'Melbourne CBD',
+    title: 'Wantirna Estate',
+    category: 'Landscape Design & Decking',
+    location: 'Wantirna, VIC',
     year: '2023',
-    src: 'https://images.unsplash.com/photo-1444628838545-ac4016a5418a?auto=format&fit=crop&w=1000&q=80',
-    aspect: 'aspect-[16/9]',
+    src: '/projects/wantirna/w11.jpg',
+    href: '/projects/wantirna',
+    aspect: 'aspect-[4/3]',
   },
 ]
 
@@ -117,7 +112,7 @@ export default function HomePage() {
           <div className="divide-y divide-sand">
             {projects.map((p, i) => (
               <Reveal key={p.title} delay={i * 0.07}>
-                <div className="group py-8 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10 hover:translate-x-1 transition-transform duration-300">
+                <Link href={p.href} className="group py-8 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10 hover:translate-x-1 transition-transform duration-300 block">
                   <div className={`flex-shrink-0 w-full sm:w-44 lg:w-56 image-frame ${p.aspect}`}>
                     <Image
                       src={p.src}
@@ -140,7 +135,7 @@ export default function HomePage() {
                   >
                     →
                   </span>
-                </div>
+                </Link>
               </Reveal>
             ))}
           </div>
