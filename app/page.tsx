@@ -55,11 +55,12 @@ export default function HomePage() {
           sizes="100vw"
         />
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/60 to-ink/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/30 to-transparent" />
 
         <div className="relative z-10 site-container py-32 md:py-40">
           <Reveal>
-            <p className="eyebrow text-paper/60 mb-8">Melbourne Landscape Company</p>
+            <p className="eyebrow text-paper/80 mb-8">Melbourne Landscape Company</p>
           </Reveal>
           <Reveal delay={0.12}>
             <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-paper leading-[1.02] mb-8 max-w-4xl">
@@ -69,7 +70,7 @@ export default function HomePage() {
             </h1>
           </Reveal>
           <Reveal delay={0.24}>
-            <p className="text-paper/70 max-w-lg text-base leading-relaxed mb-12">
+            <p className="text-paper/90 max-w-lg text-base leading-relaxed mb-12">
               Lunella Landscapes is a landscape studio creating considered outdoor environments —
               from intimate city gardens to expansive rural estates across Victoria.
             </p>
