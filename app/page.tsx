@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { Reveal } from '@/components/reveal'
 import { CtaBanner } from '@/components/cta-banner'
 import { ServicesScroll } from '@/components/services-scroll'
-import { Logo } from '@/components/logo'
 
 const projects = [
   {
@@ -160,9 +159,13 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <Reveal>
               <div className="flex items-center justify-center py-8">
-                <div className="w-72 h-72 md:w-96 md:h-96 rounded-full bg-ink flex items-center justify-center">
-                  <Logo size={80} dark />
-                </div>
+                <Image
+                  src="/lunellalogo.png"
+                  alt="Lunella Landscapes"
+                  width={400}
+                  height={400}
+                  className="w-72 h-72 md:w-96 md:h-96 object-contain"
+                />
               </div>
             </Reveal>
             <div>
