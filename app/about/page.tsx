@@ -6,7 +6,7 @@ import { CtaBanner } from '@/components/cta-banner'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Lunella Landscapes is a Melbourne landscape studio founded in 2015, creating ecologically sensitive and materially restrained outdoor environments across Victoria.',
+    'Lunella Landscapes is a Melbourne landscape company founded in 2015, creating ecologically sensitive and materially restrained outdoor environments across Victoria.',
 }
 
 const values = [

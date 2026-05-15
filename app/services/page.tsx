@@ -179,7 +179,7 @@ export default function ServicesPage() {
             <p className="text-stone text-sm leading-relaxed max-w-lg">
               We offer the full spectrum of landscape services — from initial design through to
               construction, planting, and long-term maintenance. Every engagement is managed by our
-              permanent studio team.
+              permanent company team.
             </p>
           </Reveal>
         </div>

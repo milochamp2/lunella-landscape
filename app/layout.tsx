@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: '%s | Lunella Landscape',
   },
   description:
-    'Lunella Landscape is a Melbourne-based studio creating considered outdoor environments — from intimate city gardens to expansive rural estates across Victoria.',
+    'Lunella Landscape is a Melbourne-based company creating considered outdoor environments — from intimate city gardens to expansive rural estates across Victoria.',
   metadataBase: new URL('https://lunellalandscape.com.au'),
   openGraph: {
     type: 'website',

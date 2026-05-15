@@ -43,7 +43,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <Logo size={36} dark className="mb-5" />
             <p className="text-stone text-sm leading-relaxed max-w-xs mt-4">
-              A Melbourne-based landscape studio creating considered outdoor environments for
+              A Melbourne-based landscape company creating considered outdoor environments for
               discerning clients across Victoria.
             </p>
 

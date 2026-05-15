@@ -71,7 +71,7 @@ export default function HomePage() {
           </Reveal>
           <Reveal delay={0.24}>
             <p className="text-paper/90 max-w-lg text-base leading-relaxed mb-12">
-              Lunella Landscapes is a landscape studio creating considered outdoor environments —
+              Lunella Landscapes is a landscape company creating considered outdoor environments —
               from intimate city gardens to expansive rural estates across Victoria.
             </p>
           </Reveal>
@@ -185,7 +185,7 @@ export default function HomePage() {
               </Reveal>
               <Reveal delay={0.35}>
                 <p className="text-stone text-sm leading-relaxed mb-10">
-                  Our studio works closely with architects, interior designers, and private clients
+                  Our company works closely with architects, interior designers, and private clients
                   to create outdoor spaces as considered as the buildings they surround.
                 </p>
               </Reveal>
