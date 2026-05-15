@@ -1,6 +1,5 @@
 'use client'
 
-import { useRef, useCallback } from 'react'
 import Link from 'next/link'
 
 const services = [
@@ -176,38 +175,30 @@ const services = [
   },
 ]
 
+function ServiceCard({ s }: { s: typeof services[0] }) {
+  return (
+    <div
+      className="group flex-shrink-0 w-64 md:w-72 bg-transparent hover:bg-white/5 transition-colors duration-300 p-8 flex flex-col gap-6 border-l border-white/10"
+    >
+      <div className="text-stone group-hover:text-paper transition-colors duration-300">
+        {s.icon}
+      </div>
+      <div>
+        <p className="text-paper/30 text-xs font-sans font-medium tracking-widest mb-2">
+          {s.number}
+        </p>
+        <h3 className="font-display font-bold text-paper text-lg leading-snug mb-3">
+          {s.title}
+        </h3>
+        <p className="text-stone text-xs leading-relaxed group-hover:text-stone/80 transition-colors duration-300">
+          {s.tagline}
+        </p>
+      </div>
+    </div>
+  )
+}
+
 export function ServicesScroll() {
-  const trackRef = useRef<HTMLDivElement>(null)
-  const isDragging = useRef(false)
-  const startX = useRef(0)
-  const scrollLeft = useRef(0)
-
-  const onMouseDown = useCallback((e: React.MouseEvent) => {
-    if (!trackRef.current) return
-    isDragging.current = true
-    startX.current = e.pageX - trackRef.current.offsetLeft
-    scrollLeft.current = trackRef.current.scrollLeft
-    trackRef.current.style.cursor = 'grabbing'
-  }, [])
-
-  const onMouseUp = useCallback(() => {
-    isDragging.current = false
-    if (trackRef.current) trackRef.current.style.cursor = 'grab'
-  }, [])
-
-  const onMouseMove = useCallback((e: React.MouseEvent) => {
-    if (!isDragging.current || !trackRef.current) return
-    e.preventDefault()
-    const x = e.pageX - trackRef.current.offsetLeft
-    const walk = (x - startX.current) * 1.2
-    trackRef.current.scrollLeft = scrollLeft.current - walk
-  }, [])
-
-  const onMouseLeave = useCallback(() => {
-    isDragging.current = false
-    if (trackRef.current) trackRef.current.style.cursor = 'grab'
-  }, [])
-
   return (
     <section className="bg-ink border-t border-slate relative overflow-hidden py-16 md:py-24">
       {/* Watermark */}
@@ -240,57 +231,29 @@ export function ServicesScroll() {
         </div>
       </div>
 
-      {/* Scroll hint fade edges */}
-      <div className="relative z-10">
-        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-ink to-transparent z-10" />
-        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-ink to-transparent z-10" />
+      {/* Marquee */}
+      <div className="marquee-wrapper relative z-10 overflow-hidden">
+        {/* Fade edges */}
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-ink to-transparent z-10" />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-ink to-transparent z-10" />
 
-        {/* Scrollable track */}
+        {/* Animated track — duplicated for seamless loop */}
         <div
-          ref={trackRef}
-          className="flex gap-px overflow-x-auto scrollbar-none pl-[max(1.5rem,calc((100vw-1440px)/2+1.5rem))] pr-24 select-none"
+          className="marquee-track flex gap-px"
           style={{
-            scrollSnapType: 'x mandatory',
-            WebkitOverflowScrolling: 'touch',
-            cursor: 'grab',
-            msOverflowStyle: 'none',
-            scrollbarWidth: 'none',
+            animation: 'marquee 45s linear infinite',
+            willChange: 'transform',
           }}
-          onMouseDown={onMouseDown}
-          onMouseUp={onMouseUp}
-          onMouseMove={onMouseMove}
-          onMouseLeave={onMouseLeave}
         >
+          {/* First copy */}
           {services.map((s) => (
-            <div
-              key={s.title}
-              className="group flex-shrink-0 w-64 md:w-72 bg-transparent hover:bg-white/5 transition-colors duration-300 p-8 flex flex-col gap-6 border-l border-white/10 first:border-l-0"
-              style={{ scrollSnapAlign: 'start' }}
-            >
-              <div className="text-stone group-hover:text-paper transition-colors duration-300">
-                {s.icon}
-              </div>
-              <div>
-                <p className="text-paper/30 text-xs font-sans font-medium tracking-widest mb-2">
-                  {s.number}
-                </p>
-                <h3 className="font-display font-bold text-paper text-lg leading-snug mb-3">
-                  {s.title}
-                </h3>
-                <p className="text-stone text-xs leading-relaxed group-hover:text-stone/80 transition-colors duration-300">
-                  {s.tagline}
-                </p>
-              </div>
-            </div>
+            <ServiceCard key={`a-${s.number}`} s={s} />
+          ))}
+          {/* Duplicate — makes the loop seamless */}
+          {services.map((s) => (
+            <ServiceCard key={`b-${s.number}`} s={s} />
           ))}
         </div>
-      </div>
-
-      {/* Scroll progress hint */}
-      <div className="site-container relative z-10 mt-8">
-        <p className="text-paper/20 text-xs font-sans tracking-widest uppercase">
-          Drag to explore
-        </p>
       </div>
     </section>
   )

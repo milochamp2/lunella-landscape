@@ -24,6 +24,15 @@
   }
 }
 
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marquee-wrapper:hover .marquee-track {
+  animation-play-state: paused;
+}
+
 @layer components {
   .btn {
     @apply inline-flex items-center justify-center gap-2 px-8 py-3.5 text-2xs tracking-widest uppercase font-sans font-medium transition-all duration-300 ease-out;
