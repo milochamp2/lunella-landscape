@@ -7,58 +7,53 @@ interface LogoProps {
 
 export function Logo({ size = 48, className = '', dark = false, ring = false }: LogoProps) {
   const color = dark ? '#ffffff' : '#0a0a0a'
+  const bg = dark ? 'transparent' : '#0a0a0a'
+  const textColor = dark ? '#0a0a0a' : '#ffffff'
 
   if (ring) {
-    // Circular badge variant — for header use
-    const diameter = size
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width={diameter}
-        height={diameter}
+        width={size}
+        height={size}
         viewBox="0 0 200 200"
         role="img"
         aria-label="Lunella Landscapes"
         className={className}
       >
-        {/* Circle ring */}
-        <circle
-          cx="100"
-          cy="100"
-          r="94"
-          fill={dark ? 'transparent' : color}
-          stroke={dark ? color : '#ffffff'}
-          strokeWidth="2.5"
-        />
+        {/* Filled circle */}
+        <circle cx="100" cy="100" r="96" fill={bg} />
 
-        {/* Lunella */}
+        {/* "Lunella" — large, bold, centred */}
         <text
           x="100"
-          y="108"
+          y="96"
           textAnchor="middle"
           dominantBaseline="middle"
-          fontFamily="var(--font-montserrat), system-ui, sans-serif"
-          fontSize="56"
-          fontWeight="700"
-          fill={dark ? color : '#ffffff'}
+          fontFamily="Montserrat, Poppins, system-ui, sans-serif"
+          fontSize="52"
+          fontWeight="800"
+          fill={textColor}
+          letterSpacing="1"
         >
           Lunella
         </text>
 
-        {/* Rule */}
-        <line x1="38" y1="130" x2="162" y2="130" stroke={dark ? color : '#ffffff'} strokeWidth="0.75" opacity="0.5" />
+        {/* Hairline rule */}
+        <line x1="32" y1="118" x2="168" y2="118" stroke={textColor} strokeWidth="1" opacity="0.5" />
 
-        {/* LANDSCAPES */}
+        {/* "LANDSCAPES" — spaced caps */}
         <text
           x="100"
-          y="147"
+          y="138"
           textAnchor="middle"
           dominantBaseline="middle"
-          fontFamily="var(--font-poppins), system-ui, sans-serif"
-          fontSize="10"
+          fontFamily="Montserrat, Poppins, system-ui, sans-serif"
+          fontSize="12"
           fontWeight="500"
-          fill={dark ? color : '#ffffff'}
-          letterSpacing="5"
+          fill={textColor}
+          letterSpacing="4"
+          opacity="0.85"
         >
           LANDSCAPES
         </text>
@@ -66,7 +61,7 @@ export function Logo({ size = 48, className = '', dark = false, ring = false }: 
     )
   }
 
-  // Wordmark variant (no ring)
+  // Wordmark (no ring)
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -79,30 +74,31 @@ export function Logo({ size = 48, className = '', dark = false, ring = false }: 
     >
       <text
         x="110"
-        y="42"
+        y="38"
         textAnchor="middle"
         dominantBaseline="middle"
-        fontFamily="var(--font-montserrat), var(--font-poppins), system-ui, sans-serif"
-        fontSize="42"
-        fontWeight="700"
-        letterSpacing="2"
+        fontFamily="Montserrat, Poppins, system-ui, sans-serif"
+        fontSize="46"
+        fontWeight="800"
+        letterSpacing="1"
         fill={color}
       >
         Lunella
       </text>
 
-      <line x1="18" y1="58" x2="202" y2="58" stroke={color} strokeWidth="0.75" opacity="0.4" />
+      <line x1="18" y1="58" x2="202" y2="58" stroke={color} strokeWidth="0.75" opacity="0.35" />
 
       <text
         x="110"
-        y="68"
+        y="70"
         textAnchor="middle"
         dominantBaseline="middle"
-        fontFamily="var(--font-poppins), system-ui, sans-serif"
-        fontSize="9"
+        fontFamily="Montserrat, Poppins, system-ui, sans-serif"
+        fontSize="10"
         fontWeight="500"
         fill={color}
-        letterSpacing="6"
+        letterSpacing="5"
+        opacity="0.7"
       >
         LANDSCAPES
       </text>

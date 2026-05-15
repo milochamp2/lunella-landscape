@@ -38,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en-AU" className={`${montserrat.variable} ${poppins.variable}`}>
       <body>
         <Header />
-        <main className="pt-20 md:pt-28">{children}</main>
+        <main className="pt-24 md:pt-28">{children}</main>
         <Footer />
       </body>
     </html>
