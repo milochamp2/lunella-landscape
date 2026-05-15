@@ -52,7 +52,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-ink/50" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/40 to-transparent" />
 
-        <div className="relative z-10 px-4 sm:px-8 md:px-12 lg:px-20 pt-10 pb-10 sm:pt-14 md:pt-20 md:pb-16 max-w-4xl">
+        <div className="relative z-10 px-4 sm:px-6 md:px-12 lg:px-20 pt-4 pb-10 sm:pt-6 md:pt-10 md:pb-16 max-w-4xl">
           <Reveal>
             <p className="eyebrow text-paper/80 mb-3">Melbourne Landscape Company</p>
           </Reveal>
@@ -151,16 +151,14 @@ export default function HomePage() {
         <div className="site-container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
             <Reveal className="flex justify-center items-center">
-              <div className="w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 rounded-full bg-ink flex flex-col items-center justify-center gap-2">
-                <span
-                  className="font-display font-black text-paper leading-none tracking-tight"
-                  style={{ fontSize: 'clamp(1.8rem, 6vw, 3.5rem)' }}
-                >
-                  Lunella
-                </span>
-                <span className="font-sans font-medium text-paper/70 tracking-[0.2em] uppercase text-xs">
-                  Landscapes
-                </span>
+              <div className="w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 relative">
+                <Image
+                  src="/lunella2ndlogo.png"
+                  alt="Lunella Landscapes"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 640px) 192px, (max-width: 768px) 240px, 288px"
+                />
               </div>
             </Reveal>
             <div>
