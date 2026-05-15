@@ -46,11 +46,11 @@ export default function HomePage() {
       <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
         {/* Background image */}
         <Image
-          src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1600&q=80"
-          alt="Lush formal garden"
+          src="/projects/capelsound/cp1.jpg"
+          alt="Timber deck — Cape Sound project"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-center"
           sizes="100vw"
         />
         {/* Gradient overlay — strong left-side wash for text legibility */}

@@ -5,7 +5,13 @@
       "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\app\\\\services\")",
       "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\app\\\\contact\")",
       "Bash(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\app\\\\crew\")",
-      "PowerShell(Copy-Item \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\lunellalogo\\\\lunellalogo.png\" \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\public\\\\lunellalogo.png\")"
+      "PowerShell(Copy-Item \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\lunellalogo\\\\lunellalogo.png\" \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\public\\\\lunellalogo.png\")",
+      "Bash(Get-ChildItem \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\public\\\\projects\" -Recurse -Include \"*.jpg\",\"*.jpeg\",\"*.png\")",
+      "Bash(Select-Object FullName, Length)",
+      "Bash(Sort-Object Length -Descending)",
+      "Bash(Select-Object -First 40)",
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\public\\\\projects\" -Recurse | Where-Object { $_.Extension -match '\\\\.\\(jpg|jpeg|png\\)' } | Select-Object Name, DirectoryName, Length | Sort-Object Length -Descending | Select-Object -First 30 | Format-Table -AutoSize)",
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\public\\\\projects\" -Recurse | Where-Object { $_.Extension -match '\\\\.\\(jpg|jpeg|png\\)' } | Select-Object Name, @{N='Folder';E={$_.Directory.Name}} | Format-Table -AutoSize)"
     ]
   }
 }
