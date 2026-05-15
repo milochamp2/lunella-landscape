@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 
 const services = [
@@ -200,61 +201,72 @@ function ServiceCard({ s }: { s: typeof services[0] }) {
 
 export function ServicesScroll() {
   return (
-    <section className="border-t border-slate relative overflow-hidden py-16 md:py-24" style={{ backgroundColor: '#1e1e1e' }}>
-      {/* Watermark */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none" aria-hidden>
-        <span
-          className="font-display font-black text-paper/[0.06] whitespace-nowrap"
-          style={{ fontSize: 'clamp(80px, 18vw, 240px)', letterSpacing: '-0.02em' }}
-        >
-          Lunella
-        </span>
+    <section className="border-t border-slate overflow-hidden">
+
+      {/* ── Photo banner with centred logo ── */}
+      <div className="relative h-[55vh] min-h-[360px] flex items-center justify-center">
+        {/* Background photo */}
+        <Image
+          src="/projects/dingley/d2.jpg"
+          alt="Dingley garden — stone paving and water feature"
+          fill
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-ink/55" />
+        {/* Bottom fade into services strip */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#1e1e1e] to-transparent" />
+
+        {/* Centred logo */}
+        <div className="relative z-10 flex flex-col items-center gap-6">
+          <Image
+            src="/lunellalogo.png"
+            alt="Lunella Landscapes"
+            width={220}
+            height={220}
+            className="w-40 h-40 md:w-52 md:h-52 object-contain drop-shadow-2xl"
+          />
+          <p className="eyebrow text-paper/70 tracking-widest">What We Do</p>
+        </div>
       </div>
 
-      {/* Header */}
-      <div className="site-container relative z-10 mb-12">
-        <div className="flex items-end justify-between gap-6">
-          <div>
-            <p className="eyebrow text-stone mb-4">What We Do</p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-paper">
-              Craft at every
-              <br />
-              scale
+      {/* ── Services marquee strip ── */}
+      <div className="relative py-10 md:py-14" style={{ backgroundColor: '#1e1e1e' }}>
+        {/* Header row */}
+        <div className="site-container mb-10">
+          <div className="flex items-end justify-between gap-6">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-paper">
+              Craft at every scale
             </h2>
+            <Link
+              href="/services"
+              className="eyebrow text-stone hover:text-paper transition-colors duration-200 inline-flex items-center gap-2 shrink-0"
+            >
+              View All <span aria-hidden>→</span>
+            </Link>
           </div>
-          <Link
-            href="/services"
-            className="eyebrow text-stone hover:text-paper transition-colors duration-200 inline-flex items-center gap-2 shrink-0 mb-1"
+        </div>
+
+        {/* Marquee */}
+        <div className="marquee-wrapper relative overflow-hidden">
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 z-10" style={{ background: 'linear-gradient(to right, #1e1e1e, transparent)' }} />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 z-10" style={{ background: 'linear-gradient(to left, #1e1e1e, transparent)' }} />
+
+          <div
+            className="marquee-track flex gap-px"
+            style={{ animation: 'marquee 45s linear infinite', willChange: 'transform' }}
           >
-            View All <span aria-hidden>→</span>
-          </Link>
+            {services.map((s) => (
+              <ServiceCard key={`a-${s.number}`} s={s} />
+            ))}
+            {services.map((s) => (
+              <ServiceCard key={`b-${s.number}`} s={s} />
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* Marquee */}
-      <div className="marquee-wrapper relative z-10 overflow-hidden">
-        {/* Fade edges */}
-        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 z-10" style={{ background: 'linear-gradient(to right, #1e1e1e, transparent)' }} />
-        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 z-10" style={{ background: 'linear-gradient(to left, #1e1e1e, transparent)' }} />
-
-        {/* Animated track — duplicated for seamless loop */}
-        <div
-          className="marquee-track flex gap-px"
-          style={{
-            animation: 'marquee 45s linear infinite',
-            willChange: 'transform',
-          }}
-        >
-          {/* First copy */}
-          {services.map((s) => (
-            <ServiceCard key={`a-${s.number}`} s={s} />
-          ))}
-          {/* Duplicate — makes the loop seamless */}
-          {services.map((s) => (
-            <ServiceCard key={`b-${s.number}`} s={s} />
-          ))}
-        </div>
-      </div>
     </section>
   )
 }
