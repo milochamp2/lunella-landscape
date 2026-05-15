@@ -22,7 +22,7 @@ const services = [
     id: 'design',
     number: '01',
     title: 'Landscape Design',
-    tagline: 'Spatial thinking that resolves the relationship between structure, plant, and light.',
+    tagline: 'We connect clients with trusted designers and manage the full build — concept to completed garden.',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
         <path d="M8 40 L24 10 L40 40" />
@@ -31,23 +31,23 @@ const services = [
       </svg>
     ),
     paragraphs: [
-      'Our design process begins with a thorough site analysis — examining aspect, drainage, existing vegetation, and the architectural language of the building. From this we develop a coherent spatial concept before drawing a single line.',
-      'We produce full design documentation including site plan, sections, elevations, planting plans, material schedules, and detailed specifications — resolved to a standard that allows precise construction and a faithful result.',
+      'Lunella does not operate an in-house design studio, but we work closely with a trusted network of landscape designers and architects to get your project designed right. We make the introduction, stay active in the process, and ensure plans are buildable before a single shovel goes in.',
+      'Once design documentation is complete, we take full responsibility for construction and installation — giving you a seamless experience from first concept to finished landscape without having to manage multiple parties yourself.',
     ],
     includes: [
-      'Feasibility consultation',
-      'Site analysis & survey',
-      'Concept design',
-      'Design development',
-      'Documentation & specification',
-      'Contractor tendering support',
+      'Introduction to trusted landscape designers',
+      'Design brief development support',
+      'Buildability review of documentation',
+      'Material & supplier recommendations',
+      'Full construction from approved plans',
+      'Ongoing liaison between designer & client',
     ],
   },
   {
     id: 'installation',
     number: '02',
-    title: 'Garden Installation',
-    tagline: 'Expert construction and planting by our in-house team, end to end.',
+    title: 'Garden Installation & Planting',
+    tagline: 'Expert construction and considered planting — built and grown by our in-house team.',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
         <rect x="8" y="30" width="32" height="10" rx="1" />
@@ -57,13 +57,13 @@ const services = [
     ),
     paragraphs: [
       'We self-perform all construction and planting with our permanent team — no subcontracting to unknown parties. This gives us direct control over quality at every stage, from bulk earthworks through to establishment planting and aftercare.',
-      'Our project manager coordinates the full build sequence, maintains a rigorous site programme, and keeps you informed at every milestone.',
+      'Our planting philosophy draws on ecological principles: plant communities that support each other, respond to site conditions, and evolve over time. We work with indigenous Victorian species, Australian natives, and carefully selected exotic perennials and grasses.',
     ],
     includes: [
       'Earthworks & drainage',
-      'Irrigation design & installation',
       'Soil preparation & amendment',
-      'Structural planting',
+      'Structural & feature planting',
+      'Mixed borders & planting schemes',
       'Lawn establishment',
       'Establishment care & watering',
     ],
@@ -95,29 +95,35 @@ const services = [
     ],
   },
   {
-    id: 'planting',
+    id: 'retaining',
     number: '04',
-    title: 'Planting Schemes',
-    tagline: 'Considered plant communities that thrive with minimal intervention.',
+    title: 'Retaining Walls',
+    tagline: 'Structural walls built to hold, frame, and define your landscape for the long term.',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
-        <path d="M24 40 L24 20" />
-        <path d="M24 20 C24 20 14 18 12 10 C20 8 26 14 24 20Z" />
-        <path d="M24 28 C24 28 34 26 36 18 C28 16 22 22 24 28Z" />
-        <path d="M16 40 h16" />
+        <rect x="6" y="10" width="36" height="7" rx="1" />
+        <rect x="6" y="19" width="36" height="7" rx="1" />
+        <rect x="6" y="28" width="36" height="7" rx="1" />
+        <path d="M18 10 L18 17" />
+        <path d="M30 10 L30 17" />
+        <path d="M12 19 L12 26" />
+        <path d="M24 19 L24 26" />
+        <path d="M36 19 L36 26" />
+        <path d="M18 28 L18 35" />
+        <path d="M30 28 L30 35" />
       </svg>
     ),
     paragraphs: [
-      'Our planting philosophy draws on ecological principles — we design communities of plants that support each other, respond to site conditions, and evolve over time into something richer than the sum of their parts.',
-      'We work with indigenous Victorian species, Australian natives, and carefully selected exotic perennials and grasses. We do not use invasive species or plants that require unsustainable levels of water.',
+      'Retaining walls are one of the most technically demanding elements of any landscape — getting the engineering right is as important as the finish. We build in natural stone, concrete block, timber sleeper, and corten steel, matching the material to the site and the design intent.',
+      'From low garden terracing to significant level changes, our walls are engineered to last and detailed to look considered — not an industrial fix, but a genuine landscape feature.',
     ],
     includes: [
-      'Planting concept & palette',
-      'Full planting documentation',
-      'Nursery sourcing & quality control',
-      'Mixed border design',
-      'Meadow & gravel garden design',
-      'Revegetation planting',
+      'Natural stone retaining walls',
+      'Concrete block & besser block walls',
+      'Timber sleeper retaining',
+      'Corten steel & modern finishes',
+      'Engineered footing & drainage',
+      'Terracing & level change management',
     ],
   },
   {

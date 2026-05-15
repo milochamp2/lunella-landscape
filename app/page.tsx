@@ -54,19 +54,19 @@ export default function HomePage() {
 
         <div className="relative z-10 px-4 sm:px-6 md:px-12 lg:px-20 pt-4 sm:pt-6 md:pt-10 md:pb-16 max-w-4xl">
           <Reveal>
-            <p className="eyebrow text-paper/80 mb-3">Melbourne Landscape Company</p>
+            <p className="eyebrow text-paper/80 mb-4 md:mb-5">Melbourne Landscape Company</p>
           </Reveal>
           <Reveal delay={0.12}>
-            <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-paper leading-[1.5] mb-4 md:mb-5">
+            <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-paper leading-[1.5] mb-5 md:mb-6">
               We shape land
               <br />
               into living art.
             </h1>
           </Reveal>
           <Reveal delay={0.24}>
-            <p className="text-paper/90 text-sm leading-[1.5] mb-3 md:mb-5 max-w-xs sm:max-w-sm md:max-w-md">
+            <p className="text-paper/90 text-sm leading-[1.5] mb-5 md:mb-6 max-w-xs sm:max-w-sm md:max-w-md">
               Lunella Landscapes is a landscape company creating considered outdoor environments —
-              from intimate city gardens to expansive rural estates across Victoria.
+              from intimate city gardens to expansive properties across Melbourne and the South East.
             </p>
           </Reveal>
           <Reveal delay={0.36}>

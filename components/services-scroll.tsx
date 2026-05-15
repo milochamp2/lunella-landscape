@@ -7,7 +7,7 @@ const services = [
   {
     number: '01',
     title: 'Landscape Design',
-    tagline: 'Spatial thinking that resolves the relationship between structure, plant, and light.',
+    tagline: 'We connect clients with trusted designers and manage the full build — concept to completed garden.',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
         <path d="M8 40 L24 10 L40 40" />
@@ -18,8 +18,8 @@ const services = [
   },
   {
     number: '02',
-    title: 'Garden Installation',
-    tagline: 'Expert construction and planting by our in-house team, end to end.',
+    title: 'Garden Installation & Planting',
+    tagline: 'Expert construction and considered planting — built and grown by our in-house team.',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
         <rect x="8" y="30" width="32" height="10" rx="1" />
@@ -43,14 +43,20 @@ const services = [
   },
   {
     number: '04',
-    title: 'Planting Schemes',
-    tagline: 'Considered plant communities that thrive with minimal intervention.',
+    title: 'Retaining Walls',
+    tagline: 'Structural walls built to hold, frame, and define your landscape for the long term.',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
-        <path d="M24 40 L24 20" />
-        <path d="M24 20 C24 20 14 18 12 10 C20 8 26 14 24 20Z" />
-        <path d="M24 28 C24 28 34 26 36 18 C28 16 22 22 24 28Z" />
-        <path d="M16 40 h16" />
+        <rect x="6" y="10" width="36" height="7" rx="1" />
+        <rect x="6" y="19" width="36" height="7" rx="1" />
+        <rect x="6" y="28" width="36" height="7" rx="1" />
+        <path d="M18 10 L18 17" />
+        <path d="M30 10 L30 17" />
+        <path d="M12 19 L12 26" />
+        <path d="M24 19 L24 26" />
+        <path d="M36 19 L36 26" />
+        <path d="M18 28 L18 35" />
+        <path d="M30 28 L30 35" />
       </svg>
     ),
   },
