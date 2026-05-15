@@ -21,8 +21,8 @@ const services = [
   {
     id: 'design',
     number: '01',
-    title: 'Landscape Design',
-    tagline: 'We connect clients with trusted designers and manage the full build — concept to completed garden.',
+    title: 'Consultation, Vision & Design',
+    tagline: 'Every project starts with a conversation — we listen, walk the site, and shape a clear direction together.',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
         <path d="M8 40 L24 10 L40 40" />
@@ -31,16 +31,16 @@ const services = [
       </svg>
     ),
     paragraphs: [
-      'Lunella does not operate an in-house design studio, but we work closely with a trusted network of landscape designers and architects to get your project designed right. We make the introduction, stay active in the process, and ensure plans are buildable before a single shovel goes in.',
-      'Once design documentation is complete, we take full responsibility for construction and installation — giving you a seamless experience from first concept to finished landscape without having to manage multiple parties yourself.',
+      'Before anything goes in the ground, we spend time understanding your site, your lifestyle, and what you want the space to feel like. We bring ideas to the table — materials, layouts, plants, levels — shaped by years of experience across hundreds of Melbourne projects.',
+      'For projects that require formal documentation, we can coordinate with a trusted landscape designer or architect on your behalf. Either way, you get a clear plan and a team that knows exactly how to build it.',
     ],
     includes: [
-      'Introduction to trusted landscape designers',
-      'Design brief development support',
-      'Buildability review of documentation',
-      'Material & supplier recommendations',
-      'Full construction from approved plans',
-      'Ongoing liaison between designer & client',
+      'On-site consultation & walkthrough',
+      'Ideas, materials & layout guidance',
+      'Budget & feasibility discussion',
+      'Coordination with designers if required',
+      'Material selection & sourcing',
+      'Clear scope before any work begins',
     ],
   },
   {
