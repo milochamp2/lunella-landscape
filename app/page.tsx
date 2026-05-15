@@ -38,7 +38,7 @@ export default function HomePage() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
+      <section className="relative min-h-screen flex flex-col justify-start overflow-hidden">
         {/* Background image */}
         <Image
           src="/projects/capelsound/cp1.jpg"
@@ -52,7 +52,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-ink/50" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/40 to-transparent" />
 
-        <div className="relative z-10 px-4 sm:px-8 md:px-12 lg:px-20 pt-14 pb-10 md:pt-20 md:pb-16 max-w-4xl">
+        <div className="relative z-10 px-4 sm:px-8 md:px-12 lg:px-20 pt-10 pb-10 sm:pt-14 md:pt-20 md:pb-16 max-w-4xl">
           <Reveal>
             <p className="eyebrow text-paper/80 mb-3">Melbourne Landscape Company</p>
           </Reveal>
