@@ -200,7 +200,7 @@ function ServiceCard({ s }: { s: typeof services[0] }) {
 
 export function ServicesScroll() {
   return (
-    <section className="bg-ink border-t border-slate relative overflow-hidden py-16 md:py-24">
+    <section className="border-t border-slate relative overflow-hidden py-16 md:py-24" style={{ backgroundColor: '#1e1e1e' }}>
       {/* Watermark */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none" aria-hidden>
         <span
@@ -234,8 +234,8 @@ export function ServicesScroll() {
       {/* Marquee */}
       <div className="marquee-wrapper relative z-10 overflow-hidden">
         {/* Fade edges */}
-        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-ink to-transparent z-10" />
-        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-ink to-transparent z-10" />
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 z-10" style={{ background: 'linear-gradient(to right, #1e1e1e, transparent)' }} />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 z-10" style={{ background: 'linear-gradient(to left, #1e1e1e, transparent)' }} />
 
         {/* Animated track — duplicated for seamless loop */}
         <div
