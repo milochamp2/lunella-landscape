@@ -52,24 +52,28 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-ink/50" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/40 to-transparent" />
 
-        <div className="relative z-10 px-4 sm:px-6 md:px-12 lg:px-20 pt-4 pb-10 sm:pt-6 md:pt-10 md:pb-16 max-w-4xl">
-          <Reveal>
-            <p className="eyebrow text-paper/80 mb-3">Melbourne Landscape Company</p>
-          </Reveal>
-          <Reveal delay={0.12}>
-            <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-paper leading-[1.05] md:leading-[1.02] mb-4 md:mb-5">
-              We shape land
-              <br />
-              into living art.
-            </h1>
-          </Reveal>
-          <Reveal delay={0.24}>
-            <p className="text-paper/90 text-sm leading-relaxed mb-6 max-w-xs sm:max-w-sm md:max-w-md">
-              Lunella Landscapes is a landscape company creating considered outdoor environments —
-              from intimate city gardens to expansive rural estates across Victoria.
-            </p>
-          </Reveal>
-          <Reveal delay={0.36}>
+        <div className="relative z-10 px-4 sm:px-6 md:px-12 lg:px-20 pt-4 sm:pt-6 md:pt-10 flex flex-col justify-between min-h-[calc(100vh-5rem)] md:min-h-0 max-w-4xl">
+          {/* Top: eyebrow + heading + description */}
+          <div>
+            <Reveal>
+              <p className="eyebrow text-paper/80 mb-4">Melbourne Landscape Company</p>
+            </Reveal>
+            <Reveal delay={0.12}>
+              <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-paper leading-[1.05] md:leading-[1.02] mb-5 md:mb-6">
+                We shape land
+                <br />
+                into living art.
+              </h1>
+            </Reveal>
+            <Reveal delay={0.24}>
+              <p className="text-paper/90 text-sm leading-relaxed md:mb-6 max-w-xs sm:max-w-sm md:max-w-md">
+                Lunella Landscapes is a landscape company creating considered outdoor environments —
+                from intimate city gardens to expansive rural estates across Victoria.
+              </p>
+            </Reveal>
+          </div>
+          {/* Bottom: buttons — pushed to bottom on mobile via justify-between */}
+          <Reveal delay={0.36} className="pb-12 md:pb-0">
             <div className="flex flex-nowrap gap-3">
               <Link href="/contact" className="btn-primary text-xs px-5 py-3 md:px-8 md:py-3.5">
                 Begin Your Project

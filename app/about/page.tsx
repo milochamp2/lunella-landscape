@@ -71,9 +71,9 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <h1 className="font-display text-5xl md:text-7xl text-ink max-w-3xl leading-[1.05] mb-8">
-              Beauty under
+              Modern landscapes,
               <br />
-              moonlight.
+              naturally grounded.
             </h1>
           </Reveal>
           <Reveal delay={0.2}>
