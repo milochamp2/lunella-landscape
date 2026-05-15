@@ -153,13 +153,13 @@ export default function HomePage() {
         <div className="site-container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <Reveal className="flex justify-center items-center py-8">
-              <div className="w-72 h-72 md:w-96 md:h-96 flex items-center justify-center">
+              <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden">
                 <Image
-                  src="/lunellalogo.png"
+                  src="/lunella2ndlogo.png"
                   alt="Lunella Landscapes"
                   width={400}
                   height={400}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
             </Reveal>
