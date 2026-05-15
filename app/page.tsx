@@ -52,31 +52,31 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-ink/50" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/40 to-transparent" />
 
-        <div className="relative z-10 site-container pt-20 pb-16 md:pt-32 md:pb-28">
+        <div className="relative z-10 px-4 sm:px-8 md:px-12 lg:px-20 pt-14 pb-10 md:pt-20 md:pb-16 max-w-4xl">
           <Reveal>
-            <p className="eyebrow text-paper/80 mb-5 md:mb-8">Melbourne Landscape Company</p>
+            <p className="eyebrow text-paper/80 mb-3">Melbourne Landscape Company</p>
           </Reveal>
           <Reveal delay={0.12}>
-            <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-paper leading-[1.05] md:leading-[1.02] mb-6 md:mb-8 max-w-4xl">
+            <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-paper leading-[1.05] md:leading-[1.02] mb-4 md:mb-5">
               We shape land
               <br />
               into living art.
             </h1>
           </Reveal>
           <Reveal delay={0.24}>
-            <p className="text-paper/90 text-sm md:text-base leading-relaxed mb-8 md:mb-12 max-w-sm md:max-w-lg">
+            <p className="text-paper/90 text-sm leading-relaxed mb-6 max-w-xs sm:max-w-sm md:max-w-md">
               Lunella Landscapes is a landscape company creating considered outdoor environments —
               from intimate city gardens to expansive rural estates across Victoria.
             </p>
           </Reveal>
           <Reveal delay={0.36}>
-            <div className="flex flex-wrap gap-3 md:gap-4">
-              <Link href="/contact" className="btn-primary">
+            <div className="flex flex-nowrap gap-3">
+              <Link href="/contact" className="btn-primary text-xs px-5 py-3 md:px-8 md:py-3.5">
                 Begin Your Project
               </Link>
               <Link
                 href="/services"
-                className="btn-secondary border-paper/40 text-paper hover:bg-paper hover:text-ink"
+                className="btn-secondary border-paper/40 text-paper hover:bg-paper hover:text-ink text-xs px-5 py-3 md:px-8 md:py-3.5"
               >
                 Our Services
               </Link>
@@ -94,17 +94,15 @@ export default function HomePage() {
       <ServicesScroll />
 
       {/* ── Selected projects ── */}
-      <section className="section-pad bg-bone border-t border-sand">
+      <section className="py-12 md:py-20 bg-bone border-t border-sand">
         <div className="site-container">
-          <div className="mb-10 md:mb-14">
+          <div className="mb-8 md:mb-10">
             <Reveal>
-              <p className="eyebrow mb-3 md:mb-4">Selected Work</p>
+              <p className="eyebrow mb-2">Selected Work</p>
             </Reveal>
             <Reveal delay={0.1}>
-              <h2 className="font-display text-3xl md:text-5xl font-bold text-ink">
-                Recent
-                <br />
-                projects
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-ink">
+                Recent projects
               </h2>
             </Reveal>
           </div>
@@ -112,7 +110,7 @@ export default function HomePage() {
           <div className="divide-y divide-sand">
             {projects.map((p, i) => (
               <Reveal key={p.title} delay={i * 0.07}>
-                <Link href={p.href} className="group py-8 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10 hover:translate-x-1 transition-transform duration-300 block">
+                <Link href={p.href} className="group py-5 md:py-7 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 hover:translate-x-1 transition-transform duration-300 block">
                   <div className={`flex-shrink-0 w-full sm:w-44 lg:w-56 image-frame ${p.aspect}`}>
                     <Image
                       src={p.src}
@@ -140,7 +138,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <Reveal delay={0.2} className="mt-12 text-center">
+          <Reveal delay={0.2} className="mt-8 text-center">
             <Link href="/projects" className="btn-secondary">
               View All Projects
             </Link>
