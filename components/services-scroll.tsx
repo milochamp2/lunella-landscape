@@ -204,7 +204,7 @@ export function ServicesScroll() {
     <section className="border-t border-slate overflow-hidden">
 
       {/* ── Photo banner ── */}
-      <div className="relative flex items-center justify-center" style={{ height: '60vh', minHeight: '400px' }}>
+      <div className="relative flex items-center justify-center" style={{ height: '50vh', minHeight: '280px' }}>
         <Image
           src="/projects/dingley/d2.jpg"
           alt="Dingley garden — stone paving and water feature"
@@ -218,16 +218,16 @@ export function ServicesScroll() {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#1e1e1e] to-transparent" />
 
         {/* Text — truly centred with padding to account for fade */}
-        <div className="relative z-10 text-center px-6 pb-8">
-          <p className="eyebrow text-paper/60 mb-4">What We Do</p>
-          <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-paper leading-tight">
+        <div className="relative z-10 text-center px-4 pb-6 md:pb-8">
+          <p className="eyebrow text-paper/60 mb-3 md:mb-4">What We Do</p>
+          <h2 className="font-display text-3xl sm:text-4xl md:text-6xl font-bold text-paper leading-tight">
             Craft at every scale
           </h2>
         </div>
       </div>
 
       {/* ── Services marquee strip ── */}
-      <div className="relative pb-12 pt-6" style={{ backgroundColor: '#1e1e1e' }}>
+      <div className="relative pb-8 md:pb-12 pt-5 md:pt-6" style={{ backgroundColor: '#1e1e1e' }}>
 
         {/* Header row: left label + right link, aligned with cards */}
         <div className="site-container flex items-center justify-between mb-8">
@@ -246,7 +246,7 @@ export function ServicesScroll() {
           <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 z-10" style={{ background: 'linear-gradient(to left, #1e1e1e, transparent)' }} />
           <div
             className="marquee-track flex gap-px"
-            style={{ animation: 'marquee 28s linear infinite', willChange: 'transform' }}
+            style={{ animation: 'marquee 18s linear infinite', willChange: 'transform' }}
           >
             {services.map((s) => <ServiceCard key={`a-${s.number}`} s={s} />)}
             {services.map((s) => <ServiceCard key={`b-${s.number}`} s={s} />)}

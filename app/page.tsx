@@ -52,25 +52,25 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-ink/50" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/40 to-transparent" />
 
-        <div className="relative z-10 site-container pt-24 pb-20 md:pt-32 md:pb-28">
+        <div className="relative z-10 site-container pt-20 pb-16 md:pt-32 md:pb-28">
           <Reveal>
-            <p className="eyebrow text-paper/80 mb-8">Melbourne Landscape Company</p>
+            <p className="eyebrow text-paper/80 mb-5 md:mb-8">Melbourne Landscape Company</p>
           </Reveal>
           <Reveal delay={0.12}>
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-paper leading-[1.02] mb-8 max-w-4xl">
+            <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-paper leading-[1.05] md:leading-[1.02] mb-6 md:mb-8 max-w-4xl">
               We shape land
               <br />
               into living art.
             </h1>
           </Reveal>
           <Reveal delay={0.24}>
-            <p className="text-paper/90 max-w-lg text-base leading-relaxed mb-12">
+            <p className="text-paper/90 text-sm md:text-base leading-relaxed mb-8 md:mb-12 max-w-sm md:max-w-lg">
               Lunella Landscapes is a landscape company creating considered outdoor environments —
               from intimate city gardens to expansive rural estates across Victoria.
             </p>
           </Reveal>
           <Reveal delay={0.36}>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3 md:gap-4">
               <Link href="/contact" className="btn-primary">
                 Begin Your Project
               </Link>
@@ -96,12 +96,12 @@ export default function HomePage() {
       {/* ── Selected projects ── */}
       <section className="section-pad bg-bone border-t border-sand">
         <div className="site-container">
-          <div className="mb-14">
+          <div className="mb-10 md:mb-14">
             <Reveal>
-              <p className="eyebrow mb-4">Selected Work</p>
+              <p className="eyebrow mb-3 md:mb-4">Selected Work</p>
             </Reveal>
             <Reveal delay={0.1}>
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-ink">
+              <h2 className="font-display text-3xl md:text-5xl font-bold text-ink">
                 Recent
                 <br />
                 projects
@@ -152,15 +152,15 @@ export default function HomePage() {
       <section className="section-pad bg-paper border-t border-sand">
         <div className="site-container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
-            <Reveal className="flex justify-center items-center py-8">
-              <div className="w-72 h-72 md:w-96 md:h-96 rounded-full bg-ink flex flex-col items-center justify-center gap-2 border-4 border-ink">
+            <Reveal className="flex justify-center items-center py-4 md:py-8">
+              <div className="w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full bg-ink flex flex-col items-center justify-center gap-2">
                 <span
                   className="font-display font-black text-paper leading-none tracking-tight"
-                  style={{ fontSize: 'clamp(2.8rem, 8vw, 4.5rem)' }}
+                  style={{ fontSize: 'clamp(2rem, 7vw, 4rem)' }}
                 >
                   Lunella
                 </span>
-                <span className="font-sans font-medium text-paper/70 tracking-[0.25em] uppercase text-xs md:text-sm">
+                <span className="font-sans font-medium text-paper/70 tracking-[0.2em] uppercase text-xs">
                   Landscapes
                 </span>
               </div>

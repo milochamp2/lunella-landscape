@@ -41,14 +41,14 @@ export function Header() {
           scrolled ? 'shadow-lg shadow-ink/30' : 'border-b border-white/10',
         )}
       >
-        <div className="site-container flex items-center justify-between h-24 md:h-28">
+        <div className="site-container flex items-center justify-between h-20 md:h-28">
           <Link href="/" aria-label="Lunella Landscapes — Home">
             <Image
               src="/lunellalogo.png"
               alt="Lunella Landscapes"
               width={200}
               height={80}
-              className="h-20 md:h-24 w-auto object-contain"
+              className="h-14 md:h-24 w-auto object-contain"
               priority
             />
           </Link>
