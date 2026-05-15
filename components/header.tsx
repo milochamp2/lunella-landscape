@@ -4,8 +4,8 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
+import Image from 'next/image'
 import { cn } from '@/lib/utils'
-import { Logo } from './logo'
 
 const navLinks = [
   { href: '/about', label: 'About' },
@@ -43,7 +43,14 @@ export function Header() {
       >
         <div className="site-container flex items-center justify-between h-24 md:h-28">
           <Link href="/" aria-label="Lunella Landscapes — Home">
-            <Logo size={72} ring />
+            <Image
+              src="/lunellalogo.png"
+              alt="Lunella Landscapes"
+              width={160}
+              height={60}
+              className="h-14 w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}
@@ -88,7 +95,13 @@ export function Header() {
             className="fixed inset-0 z-40 bg-paper flex flex-col items-center justify-center gap-10 md:hidden"
           >
             <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.04 }} className="mb-4">
-              <Logo size={72} ring />
+              <Image
+                src="/lunellalogo.png"
+                alt="Lunella Landscapes"
+                width={180}
+                height={68}
+                className="h-16 w-auto object-contain"
+              />
             </motion.div>
 
             {navLinks.map((link, i) => (

@@ -4,7 +4,8 @@
       "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\app\\\\about\")",
       "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\app\\\\services\")",
       "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\app\\\\contact\")",
-      "Bash(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\app\\\\crew\")"
+      "Bash(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\app\\\\crew\")",
+      "PowerShell(Copy-Item \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\lunellalogo\\\\lunellalogo.png\" \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\public\\\\lunellalogo.png\")"
     ]
   }
 }
