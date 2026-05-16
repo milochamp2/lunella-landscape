@@ -79,65 +79,6 @@ const services = [
   },
   {
     number: '06',
-    title: 'Turfs & Lawns',
-    tagline: 'Lush, healthy lawns established right and maintained with care.',
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
-        <path d="M6 34 Q12 20 18 30 Q24 18 30 30 Q36 20 42 34" />
-        <path d="M6 40 h36" />
-        <path d="M18 34 L18 40" />
-        <path d="M30 34 L30 40" />
-      </svg>
-    ),
-  },
-  {
-    number: '07',
-    title: 'Water Features',
-    tagline: 'Pools, ponds, and water walls that bring life and sound to any space.',
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
-        <path d="M24 8 C24 8 14 20 14 28 a10 10 0 0 0 20 0 C34 20 24 8 24 8Z" />
-        <path d="M18 32 C18 34 20 36 24 36" />
-      </svg>
-    ),
-  },
-  {
-    number: '08',
-    title: 'Garden Lighting',
-    tagline: 'Lighting that reveals the garden after dark — subtle and architectural.',
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
-        <circle cx="24" cy="20" r="8" />
-        <path d="M24 4 L24 8" />
-        <path d="M24 32 L24 36" />
-        <path d="M8 20 L12 20" />
-        <path d="M36 20 L40 20" />
-        <path d="M12.7 8.7 L15.5 11.5" />
-        <path d="M32.5 28.5 L35.3 31.3" />
-        <path d="M35.3 8.7 L32.5 11.5" />
-        <path d="M15.5 28.5 L12.7 31.3" />
-        <path d="M20 36 h8" />
-        <path d="M22 40 h4" />
-      </svg>
-    ),
-  },
-  {
-    number: '09',
-    title: 'Irrigation Solutions',
-    tagline: 'Smart irrigation that keeps every plant thriving with minimal waste.',
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
-        <path d="M8 34 Q16 34 16 26 Q16 18 24 18 Q32 18 32 26 Q32 34 40 34" />
-        <path d="M16 26 L16 40" />
-        <path d="M32 26 L32 40" />
-        <path d="M22 10 Q24 8 26 10" strokeDasharray="2 2" />
-        <path d="M18 13 Q20 10 22 13" strokeDasharray="2 2" />
-        <path d="M26 13 Q28 10 30 13" strokeDasharray="2 2" />
-      </svg>
-    ),
-  },
-  {
-    number: '10',
     title: 'Fencing',
     tagline: 'All aspects of hard and soft scapes — boundary, privacy, and structure.',
     icon: (
@@ -155,7 +96,7 @@ const services = [
     ),
   },
   {
-    number: '11',
+    number: '07',
     title: 'Concrete — Driveways & Paths',
     tagline: 'Durable, well-finished concrete driveways and paths built to last.',
     icon: (
@@ -167,39 +108,23 @@ const services = [
       </svg>
     ),
   },
-  {
-    number: '12',
-    title: 'Raised Garden Beds',
-    tagline: 'Custom timber and steel raised beds for edibles, herbs, and flowers.',
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
-        <rect x="8" y="28" width="32" height="12" rx="1" />
-        <path d="M14 28 C14 22 12 16 24 12 C36 16 34 22 34 28" />
-        <path d="M24 12 L24 28" />
-        <path d="M16 22 h16" />
-      </svg>
-    ),
-  },
 ]
 
 function ServiceCard({ s }: { s: typeof services[0] }) {
   return (
     <div
-      className="group flex-shrink-0 w-64 md:w-72 bg-transparent hover:bg-white/5 transition-colors duration-300 p-8 flex flex-col gap-6 border-l border-white/10"
+      className="group flex-shrink-0 w-40 md:w-48 bg-transparent hover:bg-white/5 transition-colors duration-300 p-5 flex flex-col gap-4 border-l border-white/10"
     >
       <div className="text-stone group-hover:text-paper transition-colors duration-300">
         {s.icon}
       </div>
       <div>
-        <p className="text-paper/30 text-xs font-sans font-medium tracking-widest mb-2">
+        <p className="text-paper/30 text-xs font-sans font-medium tracking-widest mb-1">
           {s.number}
         </p>
-        <h3 className="font-display font-bold text-paper text-lg leading-snug mb-3">
+        <h3 className="font-display font-bold text-paper text-sm leading-snug">
           {s.title}
         </h3>
-        <p className="text-stone text-xs leading-relaxed group-hover:text-stone/80 transition-colors duration-300">
-          {s.tagline}
-        </p>
       </div>
     </div>
   )
