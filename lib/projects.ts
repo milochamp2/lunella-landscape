@@ -54,6 +54,13 @@ export const projects: Project[] = [
     images: imgs('croydon', ['cr6.jpg', 'cr2.jpg', 'cr3.jpg', 'cr4.jpg', 'cr5.jpg', 'cr7.jpg', 'cr1.jpg']),
   },
   {
+    slug: 'croydon2',
+    title: 'Croydon Poolside',
+    location: 'Croydon, VIC',
+    suburb: 'Croydon',
+    images: imgs('croydon2', ['cr3.jpg']),
+  },
+  {
     slug: 'dingley',
     title: 'Dingley',
     location: 'Dingley Village, VIC',
@@ -65,14 +72,14 @@ export const projects: Project[] = [
     title: 'Fitzroy',
     location: 'Fitzroy, VIC',
     suburb: 'Fitzroy',
-    images: imgs('fitzroy', ['f1.jpg', 'f2.jpg', 'f3.jpg', 'f4.jpg', 'f5.jpg', 'f6.jpg', 'f7.jpg']),
+    images: imgs('fitzroy', ['f4.png', 'f1.jpg', 'f2.jpg', 'f3.jpg', 'f4.jpg', 'f5.jpg', 'f6.jpg', 'f7.jpg']),
   },
   {
     slug: 'flemington',
     title: 'Flemington',
     location: 'Flemington, VIC',
     suburb: 'Flemington',
-    images: imgs('flemington', ['fm5.jpg', 'fm1.jpg', 'fm2.jpg', 'fm3.jpg', 'fm4.jpg', 'fm6.jpg']),
+    images: imgs('flemington', ['fm2.png', 'fm5.jpg', 'fm1.jpg', 'fm2.jpg', 'fm3.jpg', 'fm4.jpg', 'fm6.jpg', 'fm3.png']),
   },
   {
     slug: 'footscray',
@@ -128,7 +135,7 @@ export const projects: Project[] = [
     title: 'Richmond',
     location: 'Richmond, VIC',
     suburb: 'Richmond',
-    images: imgs('richmond', ['rc1.jpg', 'rc2.jpg', 'rc3.jpg']),
+    images: imgs('richmond', ['rc3.jpg', 'rc1.jpg', 'rc2.jpg']),
   },
   {
     slug: 'stkilda',

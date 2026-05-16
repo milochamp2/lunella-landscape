@@ -12,7 +12,13 @@
       "Bash(Select-Object -First 40)",
       "PowerShell(Get-ChildItem \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\public\\\\projects\" -Recurse | Where-Object { $_.Extension -match '\\\\.\\(jpg|jpeg|png\\)' } | Select-Object Name, DirectoryName, Length | Sort-Object Length -Descending | Select-Object -First 30 | Format-Table -AutoSize)",
       "PowerShell(Get-ChildItem \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\public\\\\projects\" -Recurse | Where-Object { $_.Extension -match '\\\\.\\(jpg|jpeg|png\\)' } | Select-Object Name, @{N='Folder';E={$_.Directory.Name}} | Format-Table -AutoSize)",
-      "PowerShell(Copy-Item \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\lunellalogo\\\\lunella2ndlogo.png\" \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\public\\\\lunella2ndlogo.png\")"
+      "PowerShell(Copy-Item \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\lunellalogo\\\\lunella2ndlogo.png\" \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\public\\\\lunella2ndlogo.png\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\public\\\\projects\\\\croydon2\")",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\client projects imgs\\\\croydon poolside\\\\cr3.jpg\" \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\public\\\\projects\\\\croydon2\\\\cr3.jpg\")",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\client projects imgs\\\\fitzroy\\\\f4.png\" \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\public\\\\projects\\\\fitzroy\\\\f4.png\")",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\client projects imgs\\\\Flemington\\\\fm2.png\" \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\public\\\\projects\\\\flemington\\\\fm2.png\")",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\client projects imgs\\\\Flemington\\\\fm3.png\" \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\public\\\\projects\\\\flemington\\\\fm3.png\")",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\client projects imgs\\\\richmond\\\\rc3.jpg\" \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\public\\\\projects\\\\richmond\\\\rc3.jpg\" -Force)"
     ]
   }
 }
