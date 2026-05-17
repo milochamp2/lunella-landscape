@@ -140,9 +140,9 @@ export default function AboutPage() {
             <Reveal>
               <p className="eyebrow mb-6">Our Approach</p>
               <h2 className="font-display text-4xl md:text-5xl text-ink leading-[1.1]">
-                Land as a medium,
+                Modern landscapes,
                 <br />
-                <em>time as a collaborator</em>
+                <em>naturally grounded.</em>
               </h2>
             </Reveal>
             <div className="space-y-5">

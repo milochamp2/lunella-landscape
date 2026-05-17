@@ -51,7 +51,7 @@ export const projects: Project[] = [
     title: 'Croydon',
     location: 'Croydon, VIC',
     suburb: 'Croydon',
-    images: imgs('croydon', ['cr6.jpg', 'cr2.jpg', 'cr3.jpg', 'cr4.jpg', 'cr5.jpg', 'cr7.jpg', 'cr1.jpg']),
+    images: imgs('croydon', ['cr6.jpg', 'cr5.jpg']),
   },
   {
     slug: 'croydon2',
@@ -86,7 +86,7 @@ export const projects: Project[] = [
     title: 'Footscray',
     location: 'Footscray, VIC',
     suburb: 'Footscray',
-    images: imgs('footscray', ['fs1.jpg', 'fs2.jpg', 'fs3.jpg']),
+    images: imgs('footscray', ['fs2.jpg', 'fs3.jpg']),
   },
   {
     slug: 'hawthorn',
@@ -100,7 +100,7 @@ export const projects: Project[] = [
     title: 'Heathmont',
     location: 'Heathmont, VIC',
     suburb: 'Heathmont',
-    images: imgs('heathmont', ['h7.png', 'h4.jpg', 'h5.jpg', 'h6.jpg', 'h1.jpg', 'h2.jpg', 'h3.jpg']),
+    images: imgs('heathmont', ['h7.png', 'h4.jpg', 'h5.jpg', 'h6.jpg', 'h1.jpg', 'h2.jpg']),
   },
   {
     slug: 'malvern',
