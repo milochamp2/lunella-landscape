@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import { Reveal } from '@/components/reveal'
 import { CtaBanner } from '@/components/cta-banner'
+import { MoonlightSection } from '@/components/moonlight-section'
 
 export const metadata: Metadata = {
   title: 'About',
@@ -102,7 +103,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Name meaning ── */}
-      <section className="section-pad bg-ink">
+      <MoonlightSection className="section-pad bg-ink">
         <div className="site-container">
           <div className="max-w-3xl mx-auto text-center">
             <Reveal>
@@ -130,7 +131,7 @@ export default function AboutPage() {
             </Reveal>
           </div>
         </div>
-      </section>
+      </MoonlightSection>
 
       {/* ── Philosophy ── */}
       <section className="section-pad bg-bone border-t border-b border-sand">
