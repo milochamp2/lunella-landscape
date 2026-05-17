@@ -23,7 +23,7 @@ export function MoonlightSection({
   const sectionRef = useRef<HTMLElement>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const particles = useRef<Particle[]>([])
-  const raf = useRef<number>()
+  const raf = useRef<number | undefined>(undefined)
 
   useEffect(() => {
     const section = sectionRef.current
