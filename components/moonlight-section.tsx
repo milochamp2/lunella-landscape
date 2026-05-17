@@ -97,7 +97,7 @@ export function MoonlightSection({
     <section ref={sectionRef} className={`relative ${className ?? ''}`}>
       {/* Background image */}
       <Image
-        src="/moongardenpng.png"
+        src="/moongardenpng4K.png"
         alt=""
         fill
         className="object-cover object-center opacity-85"
