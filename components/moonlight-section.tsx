@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 
 interface Particle {
@@ -44,14 +45,14 @@ export function MoonlightSection({
       const rect = section.getBoundingClientRect()
       const x = e.clientX - rect.left
       const y = e.clientY - rect.top
-      for (let i = 0; i < 6; i++) {
-        const life = 50 + Math.random() * 40
+      for (let i = 0; i < 8; i++) {
+        const life = 140 + Math.random() * 80
         particles.current.push({
           x,
           y,
-          radius: 1.5 + Math.random() * 3,
-          vx: (Math.random() - 0.5) * 2.5,
-          vy: (Math.random() - 0.5) * 2.5 - 0.8,
+          radius: 2 + Math.random() * 3.5,
+          vx: (Math.random() - 0.5) * 1.2,
+          vy: (Math.random() - 0.5) * 1.2 - 0.4,
           life,
           maxLife: life,
           hue: 40 + Math.random() * 50,
@@ -68,15 +69,16 @@ export function MoonlightSection({
         p.life--
         p.x += p.vx
         p.y += p.vy
-        p.vy += 0.04
+        p.vy += 0.015
         const t = p.life / p.maxLife
+        const alpha = Math.pow(t, 0.4) * 0.9
         ctx.save()
-        ctx.globalAlpha = t * 0.85
-        ctx.shadowBlur = 14
+        ctx.globalAlpha = alpha
+        ctx.shadowBlur = 16
         ctx.shadowColor = `hsl(${p.hue}, 100%, 80%)`
-        ctx.fillStyle = `hsl(${p.hue}, 100%, 92%)`
+        ctx.fillStyle = `hsl(${p.hue}, 100%, 93%)`
         ctx.beginPath()
-        ctx.arc(p.x, p.y, p.radius * t, 0, Math.PI * 2)
+        ctx.arc(p.x, p.y, p.radius * Math.pow(t, 0.3), 0, Math.PI * 2)
         ctx.fill()
         ctx.restore()
       }
@@ -93,12 +95,27 @@ export function MoonlightSection({
 
   return (
     <section ref={sectionRef} className={`relative ${className ?? ''}`}>
+      {/* Background image */}
+      <Image
+        src="/moongardenpng.png"
+        alt=""
+        fill
+        className="object-cover object-center opacity-30"
+        sizes="100vw"
+        aria-hidden
+      />
+      {/* Dark overlay to keep text readable */}
+      <div className="absolute inset-0 bg-ink/60" />
+      {/* Shimmer canvas */}
       <canvas
         ref={canvasRef}
         className="absolute inset-0 pointer-events-none z-10"
         style={{ mixBlendMode: 'screen' }}
       />
-      {children}
+      {/* Content */}
+      <div className="relative z-20">
+        {children}
+      </div>
     </section>
   )
 }
