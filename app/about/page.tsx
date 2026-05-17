@@ -33,27 +33,6 @@ const values = [
   },
 ]
 
-const team = [
-  {
-    name: 'Eleanor Walsh',
-    role: 'Founding Director & Lead Designer',
-    bio: 'Eleanor trained at the University of Melbourne and the Royal Botanic Gardens, London. Her work is informed by a decade studying gardens in Japan, the UK, and South Africa.',
-    src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=600&q=80',
-  },
-  {
-    name: 'James Okafor',
-    role: 'Head of Construction',
-    bio: 'James brings 18 years of stonemason and landscape construction experience. His eye for detail and material quality sets the physical standard for every project.',
-    src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80',
-  },
-  {
-    name: 'Priya Sharma',
-    role: 'Senior Horticulturalist',
-    bio: 'Priya specialises in indigenous planting and complex mixed borders. She manages our maintenance program and leads all establishment planting on new projects.',
-    src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80',
-  },
-]
-
 export default function AboutPage() {
   return (
     <>
@@ -184,25 +163,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Team ── */}
-      <section className="section-pad bg-bone border-t border-sand">
-        <div className="site-container">
-          <Reveal>
-            <p className="eyebrow mb-14">The Team</p>
-          </Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {team.map((member, i) => (
-              <Reveal key={member.name} delay={i * 0.1}>
-                <div className="border-t border-sand pt-8">
-                  <p className="eyebrow mb-2">{member.role}</p>
-                  <h3 className="font-display text-2xl text-ink mb-3">{member.name}</h3>
-                  <p className="text-stone text-sm leading-relaxed">{member.bio}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
 <CtaBanner
         heading="Work with us on your next project"
