@@ -48,7 +48,7 @@ export default async function ProjectPage({ params }: Props) {
             </Link>
           </Reveal>
           <Reveal delay={0.1}>
-            <h1 className="font-display text-4xl md:text-6xl font-bold text-ink leading-tight mb-2">
+            <h1 className="font-display text-3xl md:text-6xl font-bold text-ink leading-tight mb-2">
               {project.title}
             </h1>
           </Reveal>
@@ -70,7 +70,7 @@ export default async function ProjectPage({ params }: Props) {
 
       {/* ── Nav ── */}
       <section className="py-12 bg-bone border-t border-sand">
-        <div className="site-container flex items-center justify-between">
+        <div className="site-container flex flex-wrap items-center justify-between gap-4">
           <Link
             href="/projects"
             className="eyebrow text-stone hover:text-ink transition-colors duration-200 inline-flex items-center gap-2"

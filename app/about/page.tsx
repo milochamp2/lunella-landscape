@@ -64,7 +64,7 @@ export default function AboutPage() {
             <p className="eyebrow mb-8">About the Company</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h1 className="font-display text-5xl md:text-7xl text-ink max-w-3xl leading-[1.05] mb-8">
+            <h1 className="font-display text-3xl md:text-5xl lg:text-7xl text-ink max-w-3xl leading-[1.05] mb-8">
               Modern landscapes,
               <br />
               naturally grounded.
@@ -103,7 +103,7 @@ export default function AboutPage() {
               <p className="eyebrow text-stone mb-8">The Name</p>
             </Reveal>
             <Reveal delay={0.1}>
-              <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-paper mb-6 leading-tight">
+              <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-paper mb-6 leading-tight">
                 Beauty under moonlight.
               </h2>
             </Reveal>
@@ -132,7 +132,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
             <Reveal>
               <p className="eyebrow mb-6">Our Approach</p>
-              <h2 className="font-display text-4xl md:text-5xl text-ink leading-[1.1]">
+              <h2 className="font-display text-3xl md:text-5xl text-ink leading-[1.1]">
                 Modern landscapes,
                 <br />
                 <em>naturally grounded.</em>

@@ -18,7 +18,7 @@ export default function ContactPage() {
             <p className="eyebrow text-stone mb-6">Get in Touch</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-paper leading-tight max-w-3xl">
+            <h1 className="font-display text-3xl md:text-5xl lg:text-7xl font-bold text-paper leading-tight max-w-3xl">
               Need a quote?
               <br />
               <span className="text-stone/60">Contact us.</span>
@@ -100,7 +100,7 @@ export default function ContactPage() {
             {/* ── Right: form ── */}
             <div className="md:col-span-8">
               <Reveal delay={0.1}>
-                <div className="bg-bone border border-sand p-8 md:p-12">
+                <div className="bg-bone border border-sand p-5 md:p-12">
                   <p className="font-display text-2xl font-bold text-ink mb-8">
                     Tell us about your project
                   </p>

@@ -264,7 +264,7 @@ export default function ServicesPage() {
             <p className="eyebrow mb-8">Services</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h1 className="font-display text-5xl md:text-7xl text-ink max-w-3xl leading-[1.05] mb-8">
+            <h1 className="font-display text-3xl md:text-5xl lg:text-7xl text-ink max-w-3xl leading-[1.05] mb-8">
               A complete
               <br />
               <em>landscape service</em>
@@ -285,7 +285,7 @@ export default function ServicesPage() {
         <div className="site-container">
           <div className="divide-y divide-sand">
             {services.map((s) => (
-              <div key={s.id} id={s.id} className="py-16 md:py-20 scroll-mt-20">
+              <div key={s.id} id={s.id} className="py-10 md:py-20 scroll-mt-20">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
                   <Reveal className="md:col-span-4">
                     <Icon>{s.icon}</Icon>
@@ -329,7 +329,7 @@ export default function ServicesPage() {
             <p className="eyebrow mb-4">How We Work</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="font-display text-4xl md:text-5xl text-ink mb-14">
+            <h2 className="font-display text-3xl md:text-5xl text-ink mb-10 md:mb-14">
               The process,
               <br />
               <em>step by step</em>

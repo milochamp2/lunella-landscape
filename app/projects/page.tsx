@@ -20,7 +20,7 @@ export default function ProjectsPage() {
             <p className="eyebrow mb-4">Our Work</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-ink leading-tight">
+            <h1 className="font-display text-3xl md:text-5xl lg:text-7xl font-bold text-ink leading-tight">
               Client Projects
             </h1>
           </Reveal>
