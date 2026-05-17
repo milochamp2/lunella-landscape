@@ -65,7 +65,7 @@ export default function AboutPage() {
     <>
       {/* ── Header ── */}
       <section className="section-pad bg-bone border-b border-sand">
-        <div className="site-container">
+        <div className="site-container text-center flex flex-col items-center">
           <Reveal>
             <p className="eyebrow mb-8">About the Company</p>
           </Reveal>
