@@ -100,12 +100,12 @@ export function MoonlightSection({
         src="/moongardenpng.png"
         alt=""
         fill
-        className="object-cover object-center opacity-60"
+        className="object-cover object-center opacity-85"
         sizes="100vw"
         aria-hidden
       />
       {/* Dark overlay to keep text readable */}
-      <div className="absolute inset-0 bg-ink/35" />
+      <div className="absolute inset-0 bg-ink/25" />
       {/* Shimmer canvas */}
       <canvas
         ref={canvasRef}

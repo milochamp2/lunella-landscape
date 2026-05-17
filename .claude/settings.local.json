@@ -18,7 +18,9 @@
       "PowerShell(Copy-Item \"C:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\client projects imgs\\\\fitzroy\\\\f4.png\" \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\public\\\\projects\\\\fitzroy\\\\f4.png\")",
       "PowerShell(Copy-Item \"C:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\client projects imgs\\\\Flemington\\\\fm2.png\" \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\public\\\\projects\\\\flemington\\\\fm2.png\")",
       "PowerShell(Copy-Item \"C:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\client projects imgs\\\\Flemington\\\\fm3.png\" \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\public\\\\projects\\\\flemington\\\\fm3.png\")",
-      "PowerShell(Copy-Item \"C:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\client projects imgs\\\\richmond\\\\rc3.jpg\" \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\public\\\\projects\\\\richmond\\\\rc3.jpg\" -Force)"
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\client projects imgs\\\\richmond\\\\rc3.jpg\" \"c:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\public\\\\projects\\\\richmond\\\\rc3.jpg\" -Force)",
+      "Bash(Copy-Item \"C:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\client projects imgs\\\\Croydon\\\\cr5.jpg\" \"C:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\public\\\\projects\\\\croydon\\\\cr5.jpg\" -Force)",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\client projects imgs\\\\Croydon\\\\cr5.jpg\" \"C:\\\\Users\\\\ajala\\\\OneDrive\\\\Documents\\\\GitHub\\\\lunella-landscape\\\\public\\\\projects\\\\croydon\\\\cr5.jpg\" -Force)"
     ]
   }
 }

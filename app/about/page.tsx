@@ -54,13 +54,6 @@ const team = [
   },
 ]
 
-const recognition = [
-  { label: 'AILA Award', year: '2023', note: 'Residential Design' },
-  { label: 'AILA Award', year: '2022', note: 'Public Space' },
-  { label: 'Houses Magazine', year: '2023', note: 'Garden of the Year' },
-  { label: 'Vogue Living', year: '2024', note: 'Featured Studio' },
-]
-
 export default function AboutPage() {
   return (
     <>
@@ -211,27 +204,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Recognition ── */}
-      <section className="bg-paper border-t border-sand py-14">
-        <div className="site-container">
-          <Reveal>
-            <p className="eyebrow text-center mb-10">Recognition</p>
-          </Reveal>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-sand">
-            {recognition.map((item, i) => (
-              <Reveal key={i} delay={i * 0.08}>
-                <div className="bg-paper p-6 md:p-8 text-center">
-                  <p className="font-display text-xl text-ink mb-1">{item.label}</p>
-                  <p className="eyebrow mb-1">{item.year}</p>
-                  <p className="text-stone text-xs">{item.note}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <CtaBanner
+<CtaBanner
         heading="Work with us on your next project"
         cta={{ label: 'Start a Conversation', href: '/contact' }}
       />
