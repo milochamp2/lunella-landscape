@@ -100,7 +100,7 @@ export const projects: Project[] = [
     title: 'Heathmont',
     location: 'Heathmont, VIC',
     suburb: 'Heathmont',
-    images: imgs('heathmont', ['h4.jpg', 'h5.jpg', 'h6.jpg', 'h1.jpg', 'h2.jpg', 'h3.jpg']),
+    images: imgs('heathmont', ['h7.png', 'h4.jpg', 'h5.jpg', 'h6.jpg', 'h1.jpg', 'h2.jpg', 'h3.jpg']),
   },
   {
     slug: 'malvern',

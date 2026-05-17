@@ -10,7 +10,7 @@ const projects = [
     category: 'Stone Paving & Pool Surrounds',
     location: 'Heathmont, VIC',
     year: '2025',
-    src: '/projects/heathmont/h4.jpg',
+    src: '/projects/heathmont/h7.png',
     href: '/projects/heathmont',
     aspect: 'aspect-[4/3]',
   },
@@ -28,7 +28,7 @@ const projects = [
     category: 'Decking & Outdoor Living',
     location: 'Flemington, VIC',
     year: '2025',
-    src: '/projects/flemington/fm5.jpg',
+    src: '/projects/flemington/fm2.png',
     href: '/projects/flemington',
     aspect: 'aspect-[4/3]',
   },
@@ -151,7 +151,7 @@ export default function HomePage() {
         <div className="site-container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
             <Reveal className="flex justify-center items-center">
-              <div className="w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 relative">
+              <div className="w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 relative rounded-full overflow-hidden">
                 <Image
                   src="/lunella2ndlogo.png"
                   alt="Lunella Landscapes"
@@ -161,7 +161,7 @@ export default function HomePage() {
                 />
               </div>
             </Reveal>
-            <div>
+            <div className="flex flex-col justify-center">
               <Reveal delay={0.1}>
                 <p className="eyebrow mb-4">About the Company</p>
               </Reveal>
