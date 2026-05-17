@@ -107,7 +107,7 @@ export const projects: Project[] = [
     title: 'Malvern',
     location: 'Malvern, VIC',
     suburb: 'Malvern',
-    images: imgs('malvern', ['mv1.jpg', 'mv2.jpg', 'mv3.jpg']),
+    images: imgs('malvern', ['mv2.jpg', 'mv3.jpg']),
   },
   {
     slug: 'mt-waverly',
