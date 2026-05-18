@@ -13,18 +13,18 @@ function imgs(folder: string, files: string[]): string[] {
 export const projects: Project[] = [
   // ── Featured first ──
   {
-    slug: 'heathmont',
-    title: 'Heathmont',
-    location: 'Heathmont, VIC',
-    suburb: 'Heathmont',
-    images: imgs('heathmont', ['h7.png', 'h4.jpg', 'h5.jpg', 'h6.jpg', 'h1.jpg', 'h2.jpg']),
-  },
-  {
     slug: 'carnegie',
     title: 'Carnegie',
     location: 'Carnegie, VIC',
     suburb: 'Carnegie',
     images: imgs('carnegie', ['cr1.jpg', 'cr2.jpg', 'cr3.jpg', 'cr4.jpg', 'cr5.jpg', 'cr6.jpg']),
+  },
+  {
+    slug: 'heathmont',
+    title: 'Heathmont',
+    location: 'Heathmont, VIC',
+    suburb: 'Heathmont',
+    images: imgs('heathmont', ['h7.png', 'h4.jpg', 'h5.jpg', 'h6.jpg', 'h1.jpg', 'h2.jpg']),
   },
   {
     slug: 'capelsound',
