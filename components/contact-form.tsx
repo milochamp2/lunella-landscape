@@ -109,7 +109,9 @@ export function ContactForm() {
           <option value="installation">Garden Installation</option>
           <option value="stonework">Stonework &amp; Paving</option>
           <option value="planting">Planting Schemes</option>
-          <option value="maintenance">Maintenance Program</option>
+          <option value="irrigation">Irrigation &amp; Lighting</option>
+          <option value="decking">Decking &amp; Pergolas</option>
+          <option value="concrete">Concrete — Pathways &amp; Driveways</option>
           <option value="other">Other / Not Sure</option>
         </FloatingSelect>
       </div>
