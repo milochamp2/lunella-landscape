@@ -43,11 +43,11 @@ export function Header() {
         <div className="site-container flex items-center justify-between h-20 md:h-28">
           <Link href="/" aria-label="Lunella Landscapes — Home">
             <Image
-              src="/lunellalogo.png"
+              src="/lunella2ndlogo.png"
               alt="Lunella Landscapes"
-              width={200}
+              width={80}
               height={80}
-              className="h-14 md:h-24 w-auto object-contain"
+              className="h-14 md:h-20 w-auto object-contain rounded-full"
               priority
             />
           </Link>
@@ -97,11 +97,11 @@ export function Header() {
           >
             <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.04 }} className="mb-4">
               <Image
-                src="/lunellalogo.png"
+                src="/lunella2ndlogo.png"
                 alt="Lunella Landscapes"
-                width={200}
+                width={80}
                 height={80}
-                className="h-24 w-auto object-contain"
+                className="h-24 w-auto object-contain rounded-full"
               />
             </motion.div>
 
