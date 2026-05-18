@@ -13,7 +13,6 @@ const services = [
   { href: '/services#installation', label: 'Garden Installation' },
   { href: '/services#stonework', label: 'Stonework & Paving' },
   { href: '/services#planting', label: 'Planting Schemes' },
-  { href: '/services#maintenance', label: 'Maintenance' },
   { href: '/services#concrete', label: 'Concrete — Pathways & Driveways' },
 ]
 
@@ -102,14 +101,10 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-slate pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div className="border-t border-slate pt-8">
           <p className="text-xs text-stone">
             &copy; {new Date().getFullYear()} Lunella Landscape Pty Ltd. All rights reserved.
           </p>
-          <address className="not-italic text-xs text-stone">
-            hello@lunellalandscape.com.au &middot; +61&nbsp;3&nbsp;9000&nbsp;0000 &middot; Melbourne,
-            VIC
-          </address>
         </div>
       </div>
     </footer>
