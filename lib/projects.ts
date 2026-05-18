@@ -74,7 +74,7 @@ export const projects: Project[] = [
     title: 'Croydon',
     location: 'Croydon, VIC',
     suburb: 'Croydon',
-    images: imgs('croydon', ['cr5.jpg', 'cr6.jpg', 'cr2.jpg', 'cr3.jpg', 'cr4.jpg', 'cr7.jpg']),
+    images: imgs('croydon', ['cr3.jpg', 'cr5.jpg', 'cr2.jpg', 'cr4.jpg', 'cr7.jpg']),
   },
   {
     slug: 'croydon2',
