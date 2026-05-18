@@ -5,7 +5,6 @@ const studio = [
   { href: '/about', label: 'About' },
   { href: '/services', label: 'Services' },
   { href: '/projects', label: 'Projects' },
-  { href: '/crew', label: 'The Crew' },
   { href: '/contact', label: 'Contact' },
 ]
 
@@ -50,7 +49,7 @@ export function Footer() {
 
             <div className="flex items-center gap-4 mt-6">
               <a
-                href="https://instagram.com/lunellalandscapes"
+                href="https://www.instagram.com/lunella_landscapes/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Lunella Landscapes on Instagram"
@@ -59,7 +58,7 @@ export function Footer() {
                 <InstagramIcon />
               </a>
               <a
-                href="https://facebook.com/lunellalandscapes"
+                href="https://www.facebook.com/profile.php?id=61576254899627"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Lunella Landscapes on Facebook"
