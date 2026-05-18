@@ -43,34 +43,6 @@ export default function ContactPage() {
               <Reveal>
                 <div className="space-y-7">
                   <div>
-                    <p className="eyebrow mb-1.5">Email</p>
-                    <a
-                      href="mailto:hello@lunellalandscape.com.au"
-                      className="text-sm text-ink hover:text-stone transition-colors duration-200"
-                    >
-                      hello@lunellalandscape.com.au
-                    </a>
-                  </div>
-                  <div>
-                    <p className="eyebrow mb-1.5">Phone</p>
-                    <a
-                      href="tel:+61390000000"
-                      className="text-sm text-ink hover:text-stone transition-colors duration-200"
-                    >
-                      +61 3 9000 0000
-                    </a>
-                  </div>
-                  <div>
-                    <p className="eyebrow mb-1.5">Company</p>
-                    <address className="not-italic text-sm text-stone leading-relaxed">
-                      Level 1, 42 Smith Street
-                      <br />
-                      Collingwood VIC 3066
-                      <br />
-                      Australia
-                    </address>
-                  </div>
-                  <div>
                     <p className="eyebrow mb-1.5">Hours</p>
                     <p className="text-sm text-stone">Monday – Friday, 9 am – 5:30 pm AEST</p>
                   </div>
@@ -87,6 +59,7 @@ export default function ContactPage() {
                     'Planting Schemes',
                     'Irrigation & Lighting',
                     'Decking & Pergolas',
+                    'Concrete — Pathways & Driveways',
                   ].map((s) => (
                     <li key={s} className="text-sm text-stone flex items-center gap-2">
                       <span className="w-1 h-1 rounded-full bg-sand inline-block" />

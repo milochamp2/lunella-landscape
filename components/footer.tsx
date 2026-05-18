@@ -15,6 +15,7 @@ const services = [
   { href: '/services#stonework', label: 'Stonework & Paving' },
   { href: '/services#planting', label: 'Planting Schemes' },
   { href: '/services#maintenance', label: 'Maintenance' },
+  { href: '/services#concrete', label: 'Concrete — Pathways & Driveways' },
 ]
 
 function InstagramIcon() {
