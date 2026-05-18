@@ -130,7 +130,7 @@ export const projects: Project[] = [
     title: 'Wantirna',
     location: 'Wantirna, VIC',
     suburb: 'Wantirna',
-    images: imgs('wantirna', ['w4.jpg', 'w5.jpg', 'w7.jpg', 'w8.jpg', 'w9.jpg', 'w10.jpg', 'w11.jpg', 'w12.jpg', 'w13.jpg', 'w14.jpg']),
+    images: imgs('wantirna', ['w4.jpg', 'w5.jpg', 'w7.jpg', 'w9.jpg', 'w10.jpg', 'w11.jpg', 'w12.jpg', 'w13.jpg']),
   },
   // ── Last ──
   {
@@ -145,7 +145,7 @@ export const projects: Project[] = [
     title: 'Fitzroy',
     location: 'Fitzroy, VIC',
     suburb: 'Fitzroy',
-    images: imgs('fitzroy', ['f4.png', 'f1.jpg', 'f2.jpg', 'f3.jpg', 'f4.jpg', 'f5.jpg', 'f6.jpg', 'f7.jpg']),
+    images: imgs('fitzroy', ['f4.png', 'f1.jpg', 'f2.jpg', 'f5.jpg', 'f6.jpg', 'f7.jpg']),
   },
   {
     slug: 'clifftonhill',
