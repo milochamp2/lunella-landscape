@@ -6,7 +6,7 @@ import { CtaBanner } from '@/components/cta-banner'
 export const metadata: Metadata = {
   title: 'Services',
   description:
-    'From landscape design to stonework and ongoing maintenance — Lunella Landscape offers a complete landscape service across Melbourne and Victoria.',
+    'Lunella Landscapes offers stone paving, decking, retaining walls, garden installation, concrete driveways, fencing, and planting across Melbourne and South East Victoria. Get a quote today.',
 }
 
 function Icon({ children }: { children: React.ReactNode }) {

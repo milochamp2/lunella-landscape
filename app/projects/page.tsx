@@ -7,7 +7,7 @@ import { projects } from '@/lib/projects'
 
 export const metadata: Metadata = {
   title: 'Projects',
-  description: 'Real landscape projects by Lunella Landscapes across Melbourne and Victoria.',
+  description: 'Browse completed landscape projects by Lunella Landscapes — stone paving, decking, retaining walls, garden installation, and concrete work across Melbourne suburbs including Heathmont, Carnegie, Parkville, Flemington and more.',
 }
 
 export default function ProjectsPage() {

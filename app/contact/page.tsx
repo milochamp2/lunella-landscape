@@ -5,7 +5,7 @@ import { ContactForm } from '@/components/contact-form'
 export const metadata: Metadata = {
   title: 'Get a Quote',
   description:
-    'Request a quote or get in touch with Lunella Landscape in Melbourne. We respond within 2 business days.',
+    'Get a free quote from Lunella Landscapes — Melbourne landscapers specialising in stone paving, decking, retaining walls, concrete driveways, and garden installation. We respond within 2 business days.',
 }
 
 export default function ContactPage() {

@@ -7,7 +7,7 @@ import { MoonlightSection } from '@/components/moonlight-section'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Lunella Landscapes is a Melbourne landscape company established in 2025, bringing over 20 years of industry experience to ecologically sensitive and materially restrained outdoor environments across Victoria.',
+    'Learn about Lunella Landscapes — a Melbourne landscape company with over 20 years of experience in stone paving, decking, garden installation, retaining walls, and outdoor construction across Melbourne and Victoria.',
 }
 
 const values = [
