@@ -43,7 +43,7 @@ export async function POST(req: NextRequest) {
   }
 
   const resend = new Resend(process.env.RESEND_API_KEY)
-  const contactEmail = process.env.CONTACT_EMAIL ?? 'hello@lunellalandscape.com.au'
+  const contactEmail = process.env.CONTACT_EMAIL ?? 'hello@lunellalandscapes.com.au'
 
   const serviceLabels: Record<string, string> = {
     design: 'Landscape Design',
@@ -67,7 +67,7 @@ export async function POST(req: NextRequest) {
 
   try {
     await resend.emails.send({
-      from: 'Lunella Landscape <noreply@lunellalandscape.com.au>',
+      from: 'Lunella Landscape <noreply@lunellalandscapes.com.au>',
       to: [contactEmail],
       replyTo: email,
       subject: `New enquiry from ${name}`,

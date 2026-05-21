@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { projects } from '@/lib/projects'
 
-const base = 'https://lunellalandscape.com.au'
+const base = 'https://lunellalandscapes.com.au'
 const lastModified = new Date()
 
 export default function sitemap(): MetadataRoute.Sitemap {

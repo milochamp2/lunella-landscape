@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   description:
     'Lunella Landscapes is a Melbourne-based landscape company specialising in stone paving, decking, retaining walls, garden installation, concrete driveways, and fencing across Melbourne and South East Victoria.',
-  metadataBase: new URL('https://lunellalandscape.com.au'),
+  metadataBase: new URL('https://lunellalandscapes.com.au'),
   keywords: [
     'landscape company Melbourne',
     'landscaping Melbourne',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true },
   },
   alternates: {
-    canonical: 'https://lunellalandscape.com.au',
+    canonical: 'https://lunellalandscapes.com.au',
   },
   openGraph: {
     type: 'website',
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: 'Lunella Landscapes — Melbourne Landscape Company',
     description:
       'Stone paving, decking, retaining walls, garden installation and more — considered outdoor environments across Melbourne and South East Victoria.',
-    url: 'https://lunellalandscape.com.au',
+    url: 'https://lunellalandscapes.com.au',
     images: [
       {
         url: '/projects/heathmont/h7.png',
@@ -83,9 +83,9 @@ const jsonLd = {
   name: 'Lunella Landscapes',
   description:
     'Melbourne-based landscape company specialising in stone paving, decking, retaining walls, garden installation, concrete driveways, and fencing.',
-  url: 'https://lunellalandscape.com.au',
-  logo: 'https://lunellalandscape.com.au/lunella2ndlogo.png',
-  image: 'https://lunellalandscape.com.au/projects/heathmont/h7.png',
+  url: 'https://lunellalandscapes.com.au',
+  logo: 'https://lunellalandscapes.com.au/lunella2ndlogo.png',
+  image: 'https://lunellalandscapes.com.au/projects/heathmont/h7.png',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Melbourne',
