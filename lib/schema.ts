@@ -5,7 +5,20 @@ export const contactSchema = z.object({
   email: z.string().email('Please enter a valid email address'),
   phone: z.string().max(30).optional(),
   service: z
-    .enum(['design', 'installation', 'stonework', 'planting', 'maintenance', 'other'])
+    .union([
+      z.enum([
+        'design',
+        'installation',
+        'stonework',
+        'planting',
+        'irrigation',
+        'decking',
+        'concrete',
+        'maintenance',
+        'other',
+      ]),
+      z.literal(''), // "Select a service…" placeholder — field is optional
+    ])
     .optional(),
   message: z
     .string()
