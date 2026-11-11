@@ -2,6 +2,12 @@ import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 import { contactSchema } from '@/lib/schema'
 import { checkRateLimit } from '@/lib/rate-limit'
+import {
+  enquiryEmailHtml,
+  enquiryEmailSubject,
+  enquiryEmailText,
+  type EnquiryEmailData,
+} from '@/lib/email/enquiry-email'
 
 export async function POST(req: NextRequest) {
   const ip =
@@ -50,29 +56,39 @@ export async function POST(req: NextRequest) {
     installation: 'Garden Installation',
     stonework: 'Stonework & Paving',
     planting: 'Planting Schemes',
+    irrigation: 'Irrigation & Lighting',
+    decking: 'Decking & Pergolas',
+    concrete: 'Concrete — Pathways & Driveways',
     maintenance: 'Maintenance Program',
     other: 'Other / Not Sure',
   }
 
-  const body_text = [
-    `Name: ${name}`,
-    `Email: ${email}`,
-    phone ? `Phone: ${phone}` : null,
-    service ? `Service: ${serviceLabels[service] ?? service}` : null,
-    '',
+  const emailData: EnquiryEmailData = {
+    name,
+    email,
+    phone: phone || undefined,
+    service: service ? (serviceLabels[service] ?? service) : undefined,
     message,
-  ]
-    .filter(Boolean)
-    .join('\n')
+    receivedAt: new Date(),
+  }
 
   try {
-    await resend.emails.send({
-      from: 'Lunella Landscape <noreply@lunellalandscapes.com.au>',
+    // Resend returns { error } rather than throwing on API failures
+    const { error } = await resend.emails.send({
+      from: 'Lunella Landscapes <noreply@lunellalandscapes.com.au>',
       to: [contactEmail],
       replyTo: email,
-      subject: `New enquiry from ${name}`,
-      text: body_text,
+      subject: enquiryEmailSubject(emailData),
+      html: enquiryEmailHtml(emailData),
+      text: enquiryEmailText(emailData),
     })
+    if (error) {
+      console.error('Resend error:', error)
+      return NextResponse.json(
+        { error: 'Failed to send your message. Please try again.' },
+        { status: 500 },
+      )
+    }
   } catch (err) {
     console.error('Resend error:', err)
     return NextResponse.json(
